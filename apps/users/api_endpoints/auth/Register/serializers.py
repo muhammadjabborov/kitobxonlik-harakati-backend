@@ -36,11 +36,9 @@ class RegisterSerializer(serializers.Serializer):
             )
         return phone_number
 
-    def validate(self, attrs):
-        identity_number = attrs.get("identity_number")
+    def validate_identity_number(self, identity_number):
         if identity_number and User.objects.filter(identity_number=identity_number).exists():
             raise serializers.ValidationError(
-                {"identity_number": _("A user with this identity number already exists.")},
-                code="already_exists",
+                _("A user with this identity number already exists."), code="already_exists"
             )
-        return attrs
+        return identity_number
