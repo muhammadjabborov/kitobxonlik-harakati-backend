@@ -1,5 +1,10 @@
 django
 psycopg2-binary
+djangorestframework-simplejwt
+adrf
+django-phonenumber-field
+phonenumbers
+httpx
 python-environ
 django-cors-headers
 django-jazzmin
