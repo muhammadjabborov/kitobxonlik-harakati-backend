@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from apps.common.models import Region
+from apps.common.models import District, Neighborhood, Region
 from apps.users.models import User
 
 
@@ -10,8 +10,22 @@ class RegionShortSerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
+class DistrictShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = District
+        fields = ("id", "name")
+
+
+class NeighborhoodShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Neighborhood
+        fields = ("id", "name")
+
+
 class GetProfileSerializer(serializers.ModelSerializer):
     region = RegionShortSerializer(read_only=True)
+    district = DistrictShortSerializer(read_only=True)
+    neighborhood = NeighborhoodShortSerializer(read_only=True)
 
     class Meta:
         model = User
@@ -19,10 +33,11 @@ class GetProfileSerializer(serializers.ModelSerializer):
             "id",
             "full_name",
             "phone_number",
-            "age",
+            "birth_date",
             "grade",
-            "school_number",
             "region",
+            "district",
+            "neighborhood",
             "identity_type",
             "identity_number",
         )

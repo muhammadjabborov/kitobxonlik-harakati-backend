@@ -33,3 +33,11 @@ class DistrictAdmin(admin.ModelAdmin):
     list_filter = ("region",)
     search_fields = ("name", "region__name")
     autocomplete_fields = ("region",)
+
+@admin.register(models.Neighborhood)
+class NeighborhoodAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "district", "created_at", "updated_at")
+    list_display_links = ("id", "name")
+    list_filter = ("district",)
+    search_fields = ("name", "district__name")
+    autocomplete_fields = ("district",)

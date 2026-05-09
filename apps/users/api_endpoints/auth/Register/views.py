@@ -40,10 +40,11 @@ class RegisterView(generics.GenericAPIView):
         user = User.objects.create_user(
             phone_number=phone_number,
             full_name=data["full_name"],
-            age=data.get("age"),
+            birth_date=data.get("birth_date"),
             grade=data.get("grade"),
             region=data.get("region"),
-            school_number=data.get("school_number"),
+            district=data.get("district"),
+            neighborhood=data.get("neighborhood"),
             identity_type=data.get("identity_type"),
             identity_number=data.get("identity_number"),
         )
@@ -66,10 +67,11 @@ def _build_user_data(user: User) -> dict:
         "id": user.id,
         "full_name": user.full_name,
         "phone_number": user.phone_number,
-        "age": user.age,
+        "birth_date": user.birth_date,
         "grade": user.grade,
-        "school_number": user.school_number,
         "region": user.region_id,
+        "district": user.district_id,
+        "neighborhood": user.neighborhood_id,
         "identity_type": user.identity_type,
         "identity_number": user.identity_number,
     }

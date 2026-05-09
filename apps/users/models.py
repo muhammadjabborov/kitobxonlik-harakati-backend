@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from apps.common.models import BaseModel, Region
+from apps.common.models import BaseModel, District, Neighborhood, Region
 from apps.users.choices import GradeChoices, IdentityTypeChoices
 from apps.users.managers import UserManager
 
@@ -10,16 +10,11 @@ from apps.users.managers import UserManager
 class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     full_name = models.CharField(_("Full name"), max_length=256)
     phone_number = models.CharField(_("Phone number"), max_length=20, unique=True)
-    age = models.PositiveSmallIntegerField(_("Age"), null=True, blank=True)
+    birth_date = models.DateField(_("Birth date"), null=True, blank=True)
     grade = models.CharField(
         _("Grade"),
         max_length=8,
         choices=GradeChoices.choices,
-        null=True,
-        blank=True,
-    )
-    school_number = models.PositiveSmallIntegerField(
-        _("School number"),
         null=True,
         blank=True,
     )
@@ -28,6 +23,22 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
         on_delete=models.SET_NULL,
         related_name="users",
         verbose_name=_("Region"),
+        null=True,
+        blank=True,
+    )
+    district = models.ForeignKey(
+        District,
+        on_delete=models.SET_NULL,
+        related_name="users",
+        verbose_name=_("District"),
+        null=True,
+        blank=True,
+    )
+    neighborhood = models.ForeignKey(
+        Neighborhood,
+        on_delete=models.SET_NULL,
+        related_name="users",
+        verbose_name=_("Neighborhood"),
         null=True,
         blank=True,
     )

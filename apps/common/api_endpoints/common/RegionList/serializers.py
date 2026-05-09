@@ -1,17 +1,9 @@
 from rest_framework import serializers
 
-from apps.common.models import District, Region
-
-
-class DistrictSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = District
-        fields = ("id", "name")
+from apps.common.models import Region
 
 
 class RegionSerializer(serializers.ModelSerializer):
-    districts = DistrictSerializer(many=True, read_only=True)
-
     class Meta:
         model = Region
-        fields = ("id", "name", "districts")
+        fields = ("id", "name")

@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 from django.utils.translation import gettext_lazy as _
 
-from apps.common.models import Region
+from apps.common.models import District, Neighborhood, Region
 from apps.users.choices import GradeChoices, IdentityTypeChoices
 from apps.users.models import User
 
@@ -11,12 +11,17 @@ from apps.users.models import User
 class RegisterSerializer(serializers.Serializer):
     phone_number = PhoneNumberField()
     full_name = serializers.CharField(max_length=256)
-    age = serializers.IntegerField(min_value=1, max_value=100, required=False, allow_null=True)
+    birth_date = serializers.DateField(required=False, allow_null=True)
     grade = serializers.ChoiceField(choices=GradeChoices.choices, required=False, allow_null=True)
     region = serializers.PrimaryKeyRelatedField(
         queryset=Region.objects.all(), required=False, allow_null=True
     )
-    school_number = serializers.IntegerField(min_value=1, required=False, allow_null=True)
+    district = serializers.PrimaryKeyRelatedField(
+        queryset=District.objects.all(), required=False, allow_null=True
+    )
+    neighborhood = serializers.PrimaryKeyRelatedField(
+        queryset=Neighborhood.objects.all(), required=False, allow_null=True
+    )
     identity_type = serializers.ChoiceField(
         choices=IdentityTypeChoices.choices, required=False, allow_null=True
     )

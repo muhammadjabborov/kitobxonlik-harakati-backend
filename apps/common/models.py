@@ -38,6 +38,22 @@ class District(BaseModel):
     def __str__(self):
         return f"{self.region} — {self.name}"
 
+class Neighborhood(BaseModel):
+    district = models.ForeignKey(
+        District,
+        on_delete=models.CASCADE,
+        related_name="neighborhoods",
+        verbose_name=_("District"),
+    )
+    name = models.CharField(_("Name"), max_length=128)
+    
+    class Meta:
+        verbose_name = _("Neighborhood")
+        verbose_name_plural = _("Neighborhoods")
+        unique_together = ("district", "name")
+
+    def __str__(self):
+        return f"{self.district} — {self.name}"
 
 class VersionHistory(BaseModel):
     version = models.CharField(_("Version"), max_length=64)
