@@ -25,6 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/common/", include("apps.common.urls", namespace="common")),
     path("api/v1/users/", include("apps.users.urls", namespace="users")),
+    path("admin_async_upload/", include("admin_async_upload.urls")),
 ]
 
 urlpatterns += swagger_urlpatterns

@@ -51,6 +51,7 @@ DJANGO_APPS = [
 CUSTOM_APPS = [
     "apps.common",
     "apps.users",
+    "apps.book",
 ]
 
 THIRD_PARTY_APPS = [
@@ -63,6 +64,7 @@ THIRD_PARTY_APPS = [
     "adrf",
     "phonenumber_field",
     'nplusone.ext.django',
+    "admin_async_upload",
 ]
 
 REST_FRAMEWORK = {
