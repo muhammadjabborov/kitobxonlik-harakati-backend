@@ -11,6 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from apps.users.api_endpoints.auth.SendAuthVerificationCode.serializers import (
     SendVerificationCodeSerializer,
 )
+from apps.users.models import User
 from apps.users.services import CacheTypes, MessageProvider
 
 
@@ -46,7 +47,9 @@ class SendAuthVerificationCodeView(APIView):
 
         await sync_to_async(cache.set)(rate_key, sent_count + 1, timeout=120)
 
-        return Response({"session": message_provider.session})
+        user_exists = await User.objects.filter(phone_number=phone_number).aexists()
+
+        return Response({"session": message_provider.session, "created": user_exists})
 
 
 __all__ = ["SendAuthVerificationCodeView"]
