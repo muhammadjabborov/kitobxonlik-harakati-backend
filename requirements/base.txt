@@ -22,3 +22,4 @@ flower==2.0.1
 dj-database-url==2.2.0
 django-async-upload-kg
 Pillow
+openpyxl
