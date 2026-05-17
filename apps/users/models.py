@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from apps.common.models import BaseModel, District, Neighborhood, Region
+from apps.common.models import BaseModel, District, Neighborhood, Region, School
 from apps.users.choices import GradeChoices, IdentityTypeChoices
 from apps.users.managers import UserManager
 
@@ -51,7 +51,15 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     )
     identity_number = models.CharField(
         _("Identity number"),
-        max_length=64,
+        max_length=12,
+        null=True,
+        blank=True,
+    )
+    school = models.ForeignKey(
+        School,
+        on_delete=models.SET_NULL,
+        related_name="users",
+        verbose_name=_("School"),
         null=True,
         blank=True,
     )
