@@ -55,6 +55,25 @@ class Neighborhood(BaseModel):
     def __str__(self):
         return f"{self.district} — {self.name}"
 
+class School(BaseModel):
+    name = models.CharField(_("Name"), max_length=128)
+    district = models.ForeignKey(
+        District,
+        on_delete=models.CASCADE,
+        related_name="schools",
+        verbose_name=_("District"),
+    )
+
+    class Meta:
+        verbose_name = _("School")
+        verbose_name_plural = _("Schools")
+        unique_together = ("district", "name")
+
+    def __str__(self):
+        return f"{self.district} — {self.name}"
+
+
+
 class VersionHistory(BaseModel):
     version = models.CharField(_("Version"), max_length=64)
     required = models.BooleanField(_("Required"), default=True)
@@ -77,3 +96,4 @@ class FrontendTranslation(BaseModel):
 
     def __str__(self):
         return str(self.key)
+

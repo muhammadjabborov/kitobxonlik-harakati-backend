@@ -18,13 +18,14 @@ class LoginForm(AuthenticationForm):
         return super().clean()
 
 
-admin.site.login_form = LoginForm
-admin.site.login_template = "login.html"
+# admin.site.login_form = LoginForm
+# admin.site.login_template = "login.html"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/common/", include("apps.common.urls", namespace="common")),
     path("api/v1/users/", include("apps.users.urls", namespace="users")),
+    path("api/v1/book/", include("apps.book.urls", namespace="book")),
     path("admin_async_upload/", include("admin_async_upload.urls")),
 ]
 
