@@ -53,7 +53,7 @@ services:
       - TZ=Asia/Tashkent
       - DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@${PG_BOUNCER_HOST}:${PG_BOUNCER_PORT}/${DB_NAME}
     ports:
-      - 8000:8000
+      - 8001:8001
     depends_on:
       - db
       - pgbouncer
