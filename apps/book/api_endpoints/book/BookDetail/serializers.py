@@ -29,4 +29,5 @@ class BookDetailSerializer(serializers.ModelSerializer):
             "page_count",
             "grades",
             "featured_date",
+            "epub_file",
         )
