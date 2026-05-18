@@ -24,7 +24,7 @@ class Command(BaseCommand):
             deleted, _ = School.objects.all().delete()
             self.stdout.write(self.style.WARNING(f"Deleted {deleted} existing School rows."))
 
-        base = settings.BASE_DIR / "school_data"
+        base = settings.BASE_DIR / "excel_data"
 
         total_created = 0
         total_skipped = 0

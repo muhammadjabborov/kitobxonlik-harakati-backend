@@ -10,7 +10,7 @@ class Command(BaseCommand):
     help = "Load regions, districts, and neighborhoods from region_data/regions.xlsx"
 
     def handle(self, *args, **kwargs):
-        path = settings.BASE_DIR / "region_data" / "regions.xlsx"
+        path = settings.BASE_DIR / "excel_data" / "regions.xlsx"
         wb = openpyxl.load_workbook(filename=path)
         ws = wb.active
 
