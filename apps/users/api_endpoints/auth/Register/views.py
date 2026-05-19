@@ -1,80 +1,63 @@
-from rest_framework import generics
+from adrf.views import APIView
+from asgiref.sync import sync_to_async
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 
-from django.contrib.auth.models import update_last_login
 from django.core.cache import cache
+from django.db.transaction import non_atomic_requests
 from django.utils.translation import gettext_lazy as _
 
 from apps.users.api_endpoints.auth.Register.serializers import RegisterSerializer
-from apps.users.models import User
-from apps.users.services import CacheTypes, generate_cache_key, is_code_valid
+from apps.users.services import CacheTypes, OTPService, generate_cache_key
 
-from rest_framework_simplejwt.tokens import RefreshToken
+REGISTER_FORM_TTL = 600
+REGISTER_RATE_LIMIT = 3
+REGISTER_RATE_WINDOW = 120
 
 
-class RegisterView(generics.GenericAPIView):
+class RegisterView(APIView):
     serializer_class = RegisterSerializer
 
-    def post(self, request, *args, **kwargs):
-        """
-        Register a new user.
+    @non_atomic_requests
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
-        Send OTP first via `SendAuthVerificationCode`, then submit all registration
-        fields together with `code` and `session` received from that endpoint.
-        """
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+    @swagger_auto_schema(request_body=RegisterSerializer)
+    async def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data)
+        await sync_to_async(serializer.is_valid)(raise_exception=True)
 
-        data = serializer.validated_data
+        data = dict(serializer.validated_data)
         phone_number = str(data["phone_number"])
-        code = data["code"]
-        session = data["session"]
+        data["phone_number"] = phone_number
+        region = data.get("region")
+        if region is not None:
+            data["region"] = region.pk
 
-        cache_key = generate_cache_key(CacheTypes.auth_sms_code, phone_number, session)
-        if not is_code_valid(cache_key, code):
-            raise ValidationError(detail={"code": _("Wrong code!")}, code="invalid")
+        rate_key = f"{CacheTypes.register_sms_code}_rate:{phone_number}"
+        sent_count = await sync_to_async(cache.get)(rate_key, 0)
+        if sent_count >= REGISTER_RATE_LIMIT:
+            raise ValidationError(
+                detail={
+                    "send_verification_code": _(
+                        "You have reached the limit of sending verification code. Try again later."
+                    )
+                },
+                code="limit_exceeded",
+            )
 
-        cache.delete(cache_key)
-
-        user = User.objects.create_user(
-            phone_number=phone_number,
-            full_name=data["full_name"],
-            birth_date=data.get("birth_date"),
-            grade=data.get("grade"),
-            region=data.get("region"),
-            district=data.get("district"),
-            neighborhood=data.get("neighborhood"),
-            identity_type=data.get("identity_type"),
-            identity_number=data.get("identity_number"),
+        otp_service = OTPService(
+            cache_type=CacheTypes.register_sms_code,
+            timeout=REGISTER_FORM_TTL,
         )
+        await otp_service.send_sms(phone_number)
+        await sync_to_async(cache.set)(rate_key, sent_count + 1, timeout=REGISTER_RATE_WINDOW)
 
-        update_last_login(None, user)
-        token = RefreshToken.for_user(user)
+        form_key = generate_cache_key(CacheTypes.register_form_data, otp_service.session)
+        await sync_to_async(cache.set)(form_key, data, timeout=REGISTER_FORM_TTL)
 
-        return Response(
-            {
-                "refresh": str(token),
-                "access": str(token.access_token),
-                "user": _build_user_data(user),
-            },
-            status=201,
-        )
-
-
-def _build_user_data(user: User) -> dict:
-    return {
-        "id": user.id,
-        "full_name": user.full_name,
-        "phone_number": user.phone_number,
-        "birth_date": user.birth_date,
-        "grade": user.grade,
-        "region": user.region_id,
-        "district": user.district_id,
-        "neighborhood": user.neighborhood_id,
-        "identity_type": user.identity_type,
-        "identity_number": user.identity_number,
-    }
+        return Response({"session": otp_service.session})
 
 
 __all__ = ["RegisterView"]

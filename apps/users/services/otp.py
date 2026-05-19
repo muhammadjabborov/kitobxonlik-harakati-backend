@@ -13,6 +13,8 @@ from apps.common.utils import octo_send_sms
 
 class CacheTypes:
     auth_sms_code = "auth_sms_code"
+    register_sms_code = "register_sms_code"
+    register_form_data = "register_form_data"
 
 
 def generate_cache_key(type_: str, *args) -> str:
@@ -33,9 +35,11 @@ class OTPService:
     static_code = "7777"
     test_phone = "+998999999999"
 
-    def __init__(self):
+    def __init__(self, cache_type: str = CacheTypes.auth_sms_code, timeout: int = 120):
         self.session = get_random_string(length=16)
         self.production_mode = settings.STAGE == "production" and "test" not in sys.argv
+        self.cache_type = cache_type
+        self.timeout = timeout
 
     def generate_code(self) -> str:
         if self.production_mode:
@@ -53,7 +57,7 @@ class OTPService:
             await octo_send_sms(phone, message)
 
         await sync_to_async(cache.set)(
-            generate_cache_key(CacheTypes.auth_sms_code, phone, self.session),
+            generate_cache_key(self.cache_type, phone, self.session),
             code,
-            timeout=120,
+            timeout=self.timeout,
         )

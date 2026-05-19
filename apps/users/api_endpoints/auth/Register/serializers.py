@@ -20,8 +20,6 @@ class RegisterSerializer(serializers.Serializer):
         choices=IdentityTypeChoices.choices, required=False, allow_null=True
     )
     identity_number = serializers.CharField(max_length=64, required=False, allow_null=True)
-    code = serializers.CharField(write_only=True)
-    session = serializers.CharField(write_only=True)
 
     def validate_phone_number(self, phone_number):
         if User.objects.filter(phone_number=str(phone_number)).exists():

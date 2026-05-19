@@ -63,6 +63,7 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
             models.Index(fields=["grade"], name="user_grade_idx"),
             models.Index(fields=["identity_number"], name="user_identity_number_idx"),
         ]
+        unique_together = [["phone_number", "identity_number"]]
 
     def __str__(self):
         return f"{self.full_name} ({self.phone_number})"

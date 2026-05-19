@@ -11,7 +11,6 @@ from django.utils.translation import gettext_lazy as _
 from apps.users.api_endpoints.auth.SendAuthVerificationCode.serializers import (
     SendVerificationCodeSerializer,
 )
-from apps.users.models import User
 from apps.users.services import CacheTypes, OTPService
 
 
@@ -24,7 +23,6 @@ class SendAuthVerificationCodeView(APIView):
 
     @swagger_auto_schema(request_body=SendVerificationCodeSerializer)
     async def post(self, request, *args, **kwargs):
-        """`phone_number` format E164 as like `+998945552233`"""
         serializer = self.serializer_class(data=request.data)
         await sync_to_async(serializer.is_valid)(raise_exception=True)
         phone_number = str(serializer.validated_data["phone_number"])
@@ -47,9 +45,7 @@ class SendAuthVerificationCodeView(APIView):
 
         await sync_to_async(cache.set)(rate_key, sent_count + 1, timeout=120)
 
-        user_exists = await User.objects.filter(phone_number=phone_number).aexists()
-
-        return Response({"session": otp_service.session, "created": user_exists})
+        return Response({"session": otp_service.session})
 
 
 __all__ = ["SendAuthVerificationCodeView"]
