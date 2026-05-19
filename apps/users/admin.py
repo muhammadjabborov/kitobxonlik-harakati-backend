@@ -13,18 +13,16 @@ class UserAdmin(BaseUserAdmin):
         "phone_number",
         "grade",
         "region",
-        "district",
-        "neighborhood",
         "identity_type",
         "is_active",
         "is_staff",
         "created_at",
     )
     list_display_links = ("id", "phone_number")
-    list_filter = ("grade", "identity_type", "is_active", "is_staff", "region", "district")
+    list_filter = ("grade", "identity_type", "is_active", "is_staff", "region")
     search_fields = ("full_name", "phone_number", "identity_number")
     ordering = ("-created_at",)
-    autocomplete_fields = ("region", "district", "neighborhood")
+    autocomplete_fields = ("region",)
 
     fieldsets = (
         (None, {"fields": ("phone_number", "password")}),
@@ -36,8 +34,6 @@ class UserAdmin(BaseUserAdmin):
                     "birth_date",
                     "grade",
                     "region",
-                    "district",
-                    "neighborhood",
                     "identity_type",
                     "identity_number",
                 )
@@ -69,8 +65,6 @@ class UserAdmin(BaseUserAdmin):
                     "birth_date",
                     "grade",
                     "region",
-                    "district",
-                    "neighborhood",
                     "identity_type",
                     "identity_number",
                     "password1",

@@ -3,11 +3,11 @@ import openpyxl
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from apps.common.models import District, Neighborhood, Region
+from apps.common.models import Region
 
 
 class Command(BaseCommand):
-    help = "Load regions, districts, and neighborhoods from region_data/regions.xlsx"
+    help = "Load regions, districts, and neighborhoods from excel_data/regions.xlsx"
 
     def handle(self, *args, **kwargs):
         path = settings.BASE_DIR / "excel_data" / "regions.xlsx"
@@ -18,44 +18,51 @@ class Command(BaseCommand):
         next(rows)  # skip header
 
         region_cache: dict[str, Region] = {}
-        district_cache: dict[tuple, District] = {}
+        district_cache: dict[str, Region] = {}
 
         created_regions = created_districts = created_neighborhoods = 0
 
         for row in rows:
+            region_code = row[0].value
             region_name = row[1].value
+            district_code = row[2].value
             district_name = row[3].value
+            neighborhood_code = row[4].value
             neighborhood_name = row[5].value
 
             if not region_name or not district_name or not neighborhood_name:
                 continue
 
-            region_name = region_name.strip()
-            district_name = district_name.strip()
-            neighborhood_name = neighborhood_name.strip()
+            region_name = str(region_name).strip()
+            district_name = str(district_name).strip()
+            neighborhood_name = str(neighborhood_name).strip()
 
-            # Region
-            if region_name not in region_cache:
-                region, created = Region.objects.get_or_create(name=region_name)
+            # Region (level 0)
+            if region_code not in region_cache:
+                region, created = Region.objects.update_or_create(
+                    soato=str(region_code),
+                    defaults={"name": region_name, "parent": None},
+                )
                 if created:
                     created_regions += 1
-                region_cache[region_name] = region
-            region = region_cache[region_name]
+                region_cache[region_code] = region
+            region = region_cache[region_code]
 
-            # District
-            district_key = (region.pk, district_name)
-            if district_key not in district_cache:
-                district, created = District.objects.get_or_create(
-                    region=region, name=district_name
+            # District (level 1)
+            if district_code not in district_cache:
+                district, created = Region.objects.update_or_create(
+                    soato=str(district_code),
+                    defaults={"name": district_name, "parent": region},
                 )
                 if created:
                     created_districts += 1
-                district_cache[district_key] = district
-            district = district_cache[district_key]
+                district_cache[district_code] = district
+            district = district_cache[district_code]
 
-            # Neighborhood
-            _, created = Neighborhood.objects.get_or_create(
-                district=district, name=neighborhood_name
+            # Neighborhood (level 2)
+            _, created = Region.objects.update_or_create(
+                soato=str(neighborhood_code),
+                defaults={"name": neighborhood_name, "parent": district},
             )
             if created:
                 created_neighborhoods += 1

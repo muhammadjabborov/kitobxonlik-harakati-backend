@@ -1,1 +1,3 @@
-from .views import *  # noqa
+from .views import NeighborhoodListView
+
+__all__ = ["NeighborhoodListView"]

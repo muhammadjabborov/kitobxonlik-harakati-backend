@@ -124,20 +124,6 @@ class Book(BaseModel):
             self.slug = slug
         super().save(*args, **kwargs)
 
-    @property
-    def audio_duration(self):
-        """Total audio duration in seconds across all chapters."""
-        result = self.audio_files.aggregate(total=models.Sum("duration"))
-        return result["total"] or 0
-
-    @property
-    def has_audiobook(self):
-        return self.audio_files.exists()
-
-    @property
-    def has_ebook(self):
-        return bool(self.epub_file)
-
 
 class AudioFile(BaseModel):
     book = models.ForeignKey(

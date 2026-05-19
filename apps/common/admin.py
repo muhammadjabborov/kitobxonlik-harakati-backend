@@ -1,29 +1,15 @@
 from django.contrib import admin
+from mptt.admin import DraggableMPTTAdmin
 
 from . import models
 
+
 @admin.register(models.Region)
-class RegionAdmin(admin.ModelAdmin):
-    list_display = ("id", "name", "created_at", "updated_at")
-    list_display_links = ("id", "name")
-    search_fields = ("name",)
-
-
-@admin.register(models.District)
-class DistrictAdmin(admin.ModelAdmin):
-    list_display = ("id", "name", "region", "created_at", "updated_at")
-    list_display_links = ("id", "name")
-    list_filter = ("region",)
-    search_fields = ("name", "region__name")
-    autocomplete_fields = ("region",)
-
-@admin.register(models.Neighborhood)
-class NeighborhoodAdmin(admin.ModelAdmin):
-    list_display = ("id", "name", "district", "created_at", "updated_at")
-    list_display_links = ("id", "name")
-    list_filter = ("district",)
-    search_fields = ("name", "district__name")
-    autocomplete_fields = ("district",)
+class RegionAdmin(DraggableMPTTAdmin):
+    list_display = ("tree_actions", "indented_title", "soato", "level")
+    list_display_links = ("indented_title",)
+    list_filter = ("level",)
+    search_fields = ("name", "soato")
 
 
 @admin.register(models.School)

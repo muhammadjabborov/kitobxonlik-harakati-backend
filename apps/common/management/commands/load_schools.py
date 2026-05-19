@@ -4,7 +4,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
-from apps.common.models import District, Region, School
+from apps.common.models import Region, School
 
 
 class Command(BaseCommand):
@@ -60,7 +60,7 @@ class Command(BaseCommand):
         ws = wb.active
 
         region_cache: dict[str, Region] = {}
-        district_cache: dict[tuple, District] = {}
+        district_cache: dict[tuple, Region] = {}
         created = skipped = missing_district = 0
 
         for i, row in enumerate(ws.iter_rows(values_only=True)):
@@ -96,7 +96,7 @@ class Command(BaseCommand):
         ws = wb.active
 
         region_cache: dict[str, Region] = {}
-        district_cache: dict[tuple, District] = {}
+        district_cache: dict[tuple, Region] = {}
         created = skipped = missing_district = 0
 
         region = self._get_region(self.TASHKENT_REGION_NAME, region_cache)
@@ -125,7 +125,7 @@ class Command(BaseCommand):
     def _get_region(self, name, cache):
         if name in cache:
             return cache[name]
-        region, _ = Region.objects.get_or_create(name=name)
+        region, _ = Region.objects.get_or_create(name=name, parent=None)
         cache[name] = region
         return region
 
@@ -133,6 +133,6 @@ class Command(BaseCommand):
         key = (region.pk, name)
         if key in cache:
             return cache[key], False
-        district, was_created = District.objects.get_or_create(region=region, name=name)
+        district, was_created = Region.objects.get_or_create(name=name, parent=region)
         cache[key] = district
         return district, was_created

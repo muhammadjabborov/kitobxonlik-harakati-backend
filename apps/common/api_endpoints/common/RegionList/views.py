@@ -11,7 +11,7 @@ class RegionListView(ListAPIView):
     pagination_class = None
 
     def get_queryset(self):
-        return Region.objects.order_by("name")
+        return Region.objects.filter(level=0).order_by("name")
 
 
 __all__ = ["RegionListView"]

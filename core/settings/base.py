@@ -65,6 +65,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
     'nplusone.ext.django',
     "admin_async_upload",
+    "mptt",
 ]
 
 REST_FRAMEWORK = {

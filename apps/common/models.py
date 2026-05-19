@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from mptt.models import MPTTModel, TreeForeignKey
 
 
 class BaseModel(models.Model):
@@ -10,8 +11,15 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class Region(BaseModel):
-    name = models.CharField(_("Name"), max_length=128, unique=True)
+class Region(MPTTModel):
+    name = models.CharField(_("Name"), max_length=255)
+    soato = models.CharField(_("Soato"), max_length=255, unique=True, null=True, blank=True)
+    parent = TreeForeignKey(
+        "self", on_delete=models.CASCADE, null=True, blank=True, related_name="children", verbose_name=_("Parent")
+    )
+
+    class MPTTMeta:
+        order_insertion_by = ["name"]
 
     class Meta:
         verbose_name = _("Region")
@@ -21,44 +29,10 @@ class Region(BaseModel):
         return self.name
 
 
-class District(BaseModel):
-    region = models.ForeignKey(
-        Region,
-        on_delete=models.CASCADE,
-        related_name="districts",
-        verbose_name=_("Region"),
-    )
-    name = models.CharField(_("Name"), max_length=128)
-
-    class Meta:
-        verbose_name = _("District")
-        verbose_name_plural = _("Districts")
-        unique_together = ("region", "name")
-
-    def __str__(self):
-        return f"{self.region} — {self.name}"
-
-class Neighborhood(BaseModel):
-    district = models.ForeignKey(
-        District,
-        on_delete=models.CASCADE,
-        related_name="neighborhoods",
-        verbose_name=_("District"),
-    )
-    name = models.CharField(_("Name"), max_length=128)
-    
-    class Meta:
-        verbose_name = _("Neighborhood")
-        verbose_name_plural = _("Neighborhoods")
-        unique_together = ("district", "name")
-
-    def __str__(self):
-        return f"{self.district} — {self.name}"
-
 class School(BaseModel):
     name = models.CharField(_("Name"), max_length=128)
     district = models.ForeignKey(
-        District,
+        Region,
         on_delete=models.CASCADE,
         related_name="schools",
         verbose_name=_("District"),

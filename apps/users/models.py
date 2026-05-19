@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from apps.common.models import BaseModel, District, Neighborhood, Region, School
+from apps.common.models import BaseModel, Region, School
 from apps.users.choices import GradeChoices, IdentityTypeChoices
 from apps.users.managers import UserManager
 
@@ -23,22 +23,6 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
         on_delete=models.SET_NULL,
         related_name="users",
         verbose_name=_("Region"),
-        null=True,
-        blank=True,
-    )
-    district = models.ForeignKey(
-        District,
-        on_delete=models.SET_NULL,
-        related_name="users",
-        verbose_name=_("District"),
-        null=True,
-        blank=True,
-    )
-    neighborhood = models.ForeignKey(
-        Neighborhood,
-        on_delete=models.SET_NULL,
-        related_name="users",
-        verbose_name=_("Neighborhood"),
         null=True,
         blank=True,
     )
