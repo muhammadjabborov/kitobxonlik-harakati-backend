@@ -11,6 +11,14 @@ from django.utils.crypto import get_random_string
 from apps.common.utils import octo_send_sms
 
 
+class CacheTypes:
+    auth_sms_code = "auth_sms_code"
+
+
+def generate_cache_key(type_: str, *args) -> str:
+    return f"{type_}{''.join(args)}"
+
+
 def is_code_valid(cache_key: str, code: str) -> bool:
     if getattr(settings, "STAGE", "development") == "development" and code == getattr(
         settings, "DEV_OTP_CODE", "7777"
@@ -20,15 +28,7 @@ def is_code_valid(cache_key: str, code: str) -> bool:
     return valid_code == code
 
 
-class CacheTypes:
-    auth_sms_code = "auth_sms_code"
-
-
-def generate_cache_key(type_, *args):
-    return f"{type_}{''.join(args)}"
-
-
-class MessageProvider:
+class OTPService:
     auth_code_message = "Kitobxonlik harakatiga kirishni tasdiqlash uchun kod: {}\npqT/VR+ITq7"
     static_code = "7777"
     test_phone = "+998999999999"
@@ -37,12 +37,12 @@ class MessageProvider:
         self.session = get_random_string(length=16)
         self.production_mode = settings.STAGE == "production" and "test" not in sys.argv
 
-    def generate_code(self):
+    def generate_code(self) -> str:
         if self.production_mode:
             return "".join(random.choice(string.digits) for _ in range(4))
         return self.static_code
 
-    async def send_sms(self, phone):
+    async def send_sms(self, phone: str) -> None:
         if phone == self.test_phone:
             self.production_mode = False
 

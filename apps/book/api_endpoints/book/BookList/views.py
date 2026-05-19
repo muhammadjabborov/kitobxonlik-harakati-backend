@@ -14,7 +14,7 @@ class BookListView(generics.ListAPIView):
     def get_queryset(self):
         qs = (
             Book.objects.filter(is_active=True)
-            .prefetch_related("authors", "categories")
+            .prefetch_related("authors", "genres")
             .order_by("order", "-id")
         )
 

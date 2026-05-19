@@ -25,14 +25,14 @@ class Author(BaseModel):
         return self.name
 
 
-class Category(BaseModel):
+class Genre(BaseModel):
     title = models.CharField(max_length=255, verbose_name=_("Title"))
     order = models.PositiveSmallIntegerField(verbose_name=_("Order"), default=0)
 
     class Meta:
         ordering = ("order",)
-        verbose_name = _("Category")
-        verbose_name_plural = _("Categories")
+        verbose_name = _("Genre")
+        verbose_name_plural = _("Genres")
 
     def __str__(self):
         return self.title
@@ -60,7 +60,7 @@ class Book(BaseModel):
         max_length=255,
     )
     authors = models.ManyToManyField(Author, verbose_name=_("Authors"), related_name="books")
-    categories = models.ManyToManyField(Category, verbose_name=_("Categories"), related_name="books")
+    genres = models.ManyToManyField(Genre, verbose_name=_("Genres"), related_name="books")
     language = models.ForeignKey(
         Language,
         on_delete=models.SET_NULL,
@@ -101,8 +101,7 @@ class Book(BaseModel):
         indexes = [
             models.Index(fields=["is_active"]),
             models.Index(fields=["published_year"]),
-            models.Index(fields=["featured_date"]),
-            models.Index(fields=["grades"]),
+            models.Index(fields=["featured_date"])
         ]
 
     def __str__(self):

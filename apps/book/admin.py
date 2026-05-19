@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.book.models import AudioFile, Author, Book, Category, Language
+from apps.book.models import AudioFile, Author, Book, Genre, Language
 
 
 class AudioFileInline(admin.TabularInline):
@@ -16,8 +16,8 @@ class AuthorAdmin(admin.ModelAdmin):
     search_fields = ("name",)
 
 
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+@admin.register(Genre)
+class GenreAdmin(admin.ModelAdmin):
     list_display = ("title", "order")
     list_editable = ("order",)
 
@@ -34,9 +34,9 @@ class BookAdmin(admin.ModelAdmin):
         "published_year", "language", "page_count", "is_active", "order",
     )
     list_editable = ("is_active", "order")
-    list_filter = ("is_active", "language", "categories", "grades", "featured_date")
+    list_filter = ("is_active", "language", "genres", "grades", "featured_date")
     search_fields = ("title", "slug")
     prepopulated_fields = {"slug": ("title",)}
-    filter_horizontal = ("authors", "categories")
+    filter_horizontal = ("authors", "genres")
     inlines = [AudioFileInline]
     readonly_fields = ("created_at", "updated_at")

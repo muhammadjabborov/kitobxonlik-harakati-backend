@@ -12,7 +12,7 @@ from apps.users.api_endpoints.auth.SendAuthVerificationCode.serializers import (
     SendVerificationCodeSerializer,
 )
 from apps.users.models import User
-from apps.users.services import CacheTypes, MessageProvider
+from apps.users.services import CacheTypes, OTPService
 
 
 class SendAuthVerificationCodeView(APIView):
@@ -42,14 +42,14 @@ class SendAuthVerificationCodeView(APIView):
                 code="limit_exceeded",
             )
 
-        message_provider = MessageProvider()
-        await message_provider.send_sms(phone_number)
+        otp_service = OTPService()
+        await otp_service.send_sms(phone_number)
 
         await sync_to_async(cache.set)(rate_key, sent_count + 1, timeout=120)
 
         user_exists = await User.objects.filter(phone_number=phone_number).aexists()
 
-        return Response({"session": message_provider.session, "created": user_exists})
+        return Response({"session": otp_service.session, "created": user_exists})
 
 
 __all__ = ["SendAuthVerificationCodeView"]
