@@ -2,7 +2,7 @@ from django.urls import path
 
 from apps.common.views import health_check_celery, health_check_redis
 
-from .api_endpoints import DistrictListView,  NeighborhoodListView, RegionListView, SchoolListView
+from .api_endpoints import DistrictListView, NeighborhoodListView, RegionListView, SchoolListView
 
 app_name = "common"
 

@@ -66,6 +66,7 @@ THIRD_PARTY_APPS = [
     'nplusone.ext.django',
     "admin_async_upload",
     "mptt",
+    "django_filters",
 ]
 
 REST_FRAMEWORK = {
