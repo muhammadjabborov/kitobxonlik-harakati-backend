@@ -11,7 +11,7 @@ class GetProfileView(RetrieveAPIView):
     def get_object(self):
         return (
             self.request.user.__class__.objects
-            .select_related("region")
+            .select_related("region__parent__parent")
             .get(pk=self.request.user.pk)
         )
 

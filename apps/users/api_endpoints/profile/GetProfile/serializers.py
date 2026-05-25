@@ -4,14 +4,22 @@ from apps.common.models import Region
 from apps.users.models import User
 
 
-class RegionShortSerializer(serializers.ModelSerializer):
+class RegionSerializer(serializers.ModelSerializer):
+    parent = serializers.SerializerMethodField()
+
     class Meta:
         model = Region
-        fields = ("id", "name", "level")
+        fields = ("id", "name", "soato", "level", "parent")
+        ref_name = "ProfileRegionNested"
+
+    def get_parent(self, obj):
+        if obj.parent_id is None:
+            return None
+        return RegionSerializer(obj.parent).data
 
 
 class GetProfileSerializer(serializers.ModelSerializer):
-    region = RegionShortSerializer(read_only=True)
+    region = RegionSerializer(read_only=True)
 
     class Meta:
         model = User
