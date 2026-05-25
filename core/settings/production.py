@@ -20,9 +20,19 @@ CSRF_TRUSTED_ORIGINS = ["https://example.com"]
 # CORS
 ###################################################################
 
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = ["*"]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+    "range",
+]
 
 REDIS_HOST = env.str("REDIS_HOST", "redis")
 REDIS_PORT = env.int("REDIS_PORT", 6379)

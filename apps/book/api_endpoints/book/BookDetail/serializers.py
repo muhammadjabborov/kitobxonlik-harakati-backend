@@ -19,6 +19,7 @@ class BookDetailSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "description",
+            "image",
             "slug",
             "genres",
             "published_year",

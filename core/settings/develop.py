@@ -2,3 +2,6 @@ from .base import *  # noqa
 
 DEBUG = True
 CELERY_TASK_ALWAYS_EAGER = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True

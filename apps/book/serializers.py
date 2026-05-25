@@ -24,4 +24,4 @@ class LanguageSerializer(serializers.ModelSerializer):
 class BookShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ("id", "title", "slug")
+        fields = ("id", "title", "slug", "image")
