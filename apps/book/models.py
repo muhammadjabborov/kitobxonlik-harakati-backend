@@ -151,3 +151,16 @@ class AudioFile(BaseModel):
         return f"{self.book.title} — {self.title}"
 
 
+
+
+class PlanToRead(BaseModel):
+    book = models.ForeignKey("book.Book", on_delete=models.CASCADE, verbose_name=_("Book"))
+    user = models.ForeignKey("users.User", on_delete=models.CASCADE, verbose_name=_("User"))
+
+    class Meta:
+        verbose_name = _("Plan To Read")
+        verbose_name_plural = _("Plan To Reads")
+        unique_together = ("user", "book")
+
+    def __str__(self):
+        return f"{self.user} - {self.book}"

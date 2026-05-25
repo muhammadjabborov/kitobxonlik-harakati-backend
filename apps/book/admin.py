@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.book.models import AudioFile, Author, Book, Genre, Language
+from apps.book.models import AudioFile, Author, Book, Genre, Language, PlanToRead
 
 
 class AudioFileInline(admin.TabularInline):
@@ -40,3 +40,11 @@ class BookAdmin(admin.ModelAdmin):
     filter_horizontal = ("authors", "genres")
     inlines = [AudioFileInline]
     readonly_fields = ("created_at", "updated_at")
+
+
+@admin.register(PlanToRead)
+class PlanToReadAdmin(admin.ModelAdmin):
+    list_filter = ["book"]
+    autocomplete_fields = ["user", "book"]
+    search_fields = ("user__full_name", "book__title")
+    list_per_page = 10
