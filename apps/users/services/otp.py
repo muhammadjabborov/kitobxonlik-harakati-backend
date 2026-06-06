@@ -2,8 +2,6 @@ import random
 import string
 import sys
 
-from asgiref.sync import sync_to_async
-
 from django.conf import settings
 from django.core.cache import cache
 from django.utils.crypto import get_random_string
@@ -46,7 +44,7 @@ class OTPService:
             return "".join(random.choice(string.digits) for _ in range(4))
         return self.static_code
 
-    async def send_sms(self, phone: str) -> None:
+    def send_sms(self, phone: str) -> None:
         if phone == self.test_phone:
             self.production_mode = False
 
@@ -54,9 +52,9 @@ class OTPService:
         message = self.auth_code_message.format(code)
 
         if self.production_mode:
-            await octo_send_sms(phone, message)
+            octo_send_sms(phone, message)
 
-        await sync_to_async(cache.set)(
+        cache.set(
             generate_cache_key(self.cache_type, phone, self.session),
             code,
             timeout=self.timeout,

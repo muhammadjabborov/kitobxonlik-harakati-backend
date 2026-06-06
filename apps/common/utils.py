@@ -9,17 +9,16 @@ from django.core.cache import caches
 from django.utils.translation import gettext_lazy as _
 
 
-
-async def send_sms(phone, message):
+def send_sms(phone, message):
     sn = "8687"
     if phone[4:6] in ["99", "77", "95", "20", "90", "91", "50", "93", "94", "88", "97"]:
         sn = "8687"
     elif phone[4:6] in ["98", "33"]:
         sn = "6500"
 
-    async with httpx.AsyncClient() as client:
+    with httpx.Client() as client:
         try:
-            await client.get(settings.SMS_URL, params={"sn": sn, "msisdn": phone[1:], "message": message}, timeout=5)
+            client.get(settings.SMS_URL, params={"sn": sn, "msisdn": phone[1:], "message": message}, timeout=5)
         except ConnectTimeout:
             raise ValidationError(
                 detail={"sms_provider": _("Can not connect to sms provider.")}, code="connection_error"
@@ -28,7 +27,7 @@ async def send_sms(phone, message):
             raise ValidationError(detail={"sms_provider": _("Something went wrong with sms provider.")}, code="error")
 
 
-async def octo_send_sms(phone, message):
+def octo_send_sms(phone, message):
     body_data = {
         "phone_number": phone[1:],
         "channels": ["sms"],
@@ -36,9 +35,9 @@ async def octo_send_sms(phone, message):
     }
     username = settings.OCTO_SMS_LOGIN
     password = settings.OCTO_SMS_PASSWORD
-    async with httpx.AsyncClient() as client:
+    with httpx.Client() as client:
         try:
-            response = await client.post(
+            response = client.post(
                 settings.OCTO_SMS_SEND_URL,
                 json=body_data,
                 auth=(username, password),
