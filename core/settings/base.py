@@ -13,7 +13,6 @@ import logging
 import os
 from pathlib import Path
 
-import dj_database_url
 import environ
 
 from core.jazzmin_conf import *  # noqa
@@ -52,7 +51,8 @@ CUSTOM_APPS = [
     "apps.common",
     "apps.users",
     "apps.book",
-    "apps.contest",
+    "apps.competition",
+    "apps.assessment",
 ]
 
 THIRD_PARTY_APPS = [
@@ -64,7 +64,7 @@ THIRD_PARTY_APPS = [
     "captcha",
     "adrf",
     "phonenumber_field",
-    'nplusone.ext.django',
+    "nplusone.ext.django",
     "admin_async_upload",
     "mptt",
     "django_filters",
@@ -75,9 +75,7 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.SessionAuthentication",
     ),
-    "DEFAULT_FILTER_BACKENDS": (
-        "django_filters.rest_framework.DjangoFilterBackend",
-    ),
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 10,
@@ -94,7 +92,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'nplusone.ext.django.NPlusOneMiddleware',
+    "nplusone.ext.django.NPlusOneMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -155,20 +153,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-NPLUSONE_LOGGER = logging.getLogger('nplusone')
+NPLUSONE_LOGGER = logging.getLogger("nplusone")
 NPLUSONE_LOG_LEVEL = logging.WARN
 
 LOGGING = {
-    'version': 1,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
+    "version": 1,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
         },
     },
-    'loggers': {
-        'nplusone': {
-            'handlers': ['console'],
-            'level': 'WARN',
+    "loggers": {
+        "nplusone": {
+            "handlers": ["console"],
+            "level": "WARN",
         },
     },
 }

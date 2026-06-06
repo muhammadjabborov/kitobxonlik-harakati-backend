@@ -52,15 +52,21 @@ class Language(BaseModel):
 
 class Book(BaseModel):
     title = models.CharField(max_length=255, verbose_name=_("Title"))
-    slug = models.SlugField(max_length=255, verbose_name=_("Slug"), unique=True, null=True, blank=True)
+    slug = models.SlugField(
+        max_length=255, verbose_name=_("Slug"), unique=True, null=True, blank=True
+    )
     description = models.TextField(verbose_name=_("Description"))
     image = models.ImageField(
         upload_to="books/covers/%Y/%m/",
         verbose_name=_("Cover Image"),
         max_length=255,
     )
-    authors = models.ManyToManyField(Author, verbose_name=_("Authors"), related_name="books")
-    genres = models.ManyToManyField(Genre, verbose_name=_("Genres"), related_name="books")
+    authors = models.ManyToManyField(
+        Author, verbose_name=_("Authors"), related_name="books"
+    )
+    genres = models.ManyToManyField(
+        Genre, verbose_name=_("Genres"), related_name="books"
+    )
     language = models.ForeignKey(
         Language,
         on_delete=models.SET_NULL,
@@ -69,8 +75,12 @@ class Book(BaseModel):
         verbose_name=_("Language"),
         related_name="books",
     )
-    published_year = models.PositiveIntegerField(verbose_name=_("Published Year"), null=True, blank=True)
-    page_count = models.PositiveIntegerField(verbose_name=_("Page Count"), null=True, blank=True)
+    published_year = models.PositiveIntegerField(
+        verbose_name=_("Published Year"), null=True, blank=True
+    )
+    page_count = models.PositiveIntegerField(
+        verbose_name=_("Page Count"), null=True, blank=True
+    )
     epub_file = models.FileField(
         upload_to="books/epub/%Y/%m/",
         verbose_name=_("EPUB File"),
@@ -101,7 +111,7 @@ class Book(BaseModel):
         indexes = [
             models.Index(fields=["is_active"]),
             models.Index(fields=["published_year"]),
-            models.Index(fields=["featured_date"])
+            models.Index(fields=["featured_date"]),
         ]
 
     def __str__(self):
@@ -113,6 +123,7 @@ class Book(BaseModel):
     def save(self, *args, **kwargs):
         if not self.slug:
             from django.utils.text import slugify
+
             base_slug = slugify(self.title, allow_unicode=False)
             if not base_slug:
                 base_slug = f"book-{self.pk or 'new'}"
@@ -139,7 +150,9 @@ class AudioFile(BaseModel):
         max_length=511,
         validators=[FileExtensionValidator(allowed_extensions=["mp3"])],
     )
-    duration = models.PositiveIntegerField(verbose_name=_("Duration (seconds)"), default=0)
+    duration = models.PositiveIntegerField(
+        verbose_name=_("Duration (seconds)"), default=0
+    )
     order = models.PositiveIntegerField(verbose_name=_("Order"), default=0)
 
     class Meta:
@@ -151,11 +164,13 @@ class AudioFile(BaseModel):
         return f"{self.book.title} — {self.title}"
 
 
-
-
 class PlanToRead(BaseModel):
-    book = models.ForeignKey("book.Book", on_delete=models.CASCADE, verbose_name=_("Book"))
-    user = models.ForeignKey("users.User", on_delete=models.CASCADE, verbose_name=_("User"))
+    book = models.ForeignKey(
+        "book.Book", on_delete=models.CASCADE, verbose_name=_("Book")
+    )
+    user = models.ForeignKey(
+        "users.User", on_delete=models.CASCADE, verbose_name=_("User")
+    )
 
     class Meta:
         verbose_name = _("Plan To Read")
