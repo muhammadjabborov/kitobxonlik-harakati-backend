@@ -8,10 +8,18 @@ from apps.users.choices import GradeChoices
 class CompetitionSeason(BaseModel):
     title = models.CharField(verbose_name=_("Title"), max_length=255)
     year = models.PositiveIntegerField(verbose_name=_("Year"))
+    is_active = models.BooleanField(verbose_name=_("Is active"), default=True)
 
     class Meta:
         verbose_name = _("Competition season")
         verbose_name_plural = _("Competition seasons")
+        constraints = [
+            models.UniqueConstraint(
+                fields=["is_active"],
+                condition=models.Q(is_active=True),
+                name="only_one_active_competition_season",
+            ),
+        ]
 
     def __str__(self):
         return f"{self.title} | {self.year}"

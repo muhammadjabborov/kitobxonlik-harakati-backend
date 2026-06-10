@@ -26,6 +26,7 @@ urlpatterns = [
     path("api/v1/common/", include("apps.common.urls", namespace="common")),
     path("api/v1/users/", include("apps.users.urls", namespace="users")),
     path("api/v1/book/", include("apps.book.urls", namespace="book")),
+    path("api/v1/assessment/", include("apps.assessment.urls", namespace="assessment")),
     path("admin_async_upload/", include("admin_async_upload.urls")),
 ]
 

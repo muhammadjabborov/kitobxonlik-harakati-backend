@@ -165,7 +165,7 @@ class UserQuestionAnswer(BaseModel):
         UserMonthlyAssessmentAttempt,
         verbose_name=_("Attempt"),
         on_delete=models.CASCADE,
-        related_name="question_answers",
+        related_name="user_question_answers",
     )
     question = models.ForeignKey(
         AssessmentQuestion,
