@@ -158,15 +158,43 @@ NPLUSONE_LOG_LEVEL = logging.WARN
 
 LOGGING = {
     "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "server": {
+            "()": "django.utils.log.ServerFormatter",
+            "format": "[{server_time}] {message}",
+            "style": "{",
+        },
+        "verbose": {
+            "format": "[{levelname}] {asctime} {name}: {message}",
+            "style": "{",
+        },
+    },
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+        "django_server": {
+            "class": "logging.StreamHandler",
+            "formatter": "server",
         },
     },
     "loggers": {
+        "django.server": {
+            "handlers": ["django_server"],
+            "level": "INFO",
+            "propagate": False,
+        },
+        "django.request": {
+            "handlers": ["console"],
+            "level": "ERROR",
+            "propagate": False,
+        },
         "nplusone": {
             "handlers": ["console"],
             "level": "WARN",
+            "propagate": False,
         },
     },
 }
