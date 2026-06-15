@@ -5,7 +5,7 @@ adrf==0.1.12
 django-phonenumber-field==8.4.0
 phonenumbers==9.0.30
 httpx==0.28.1
-python-environ==0.4.54
+django-environ==0.13.0
 django-cors-headers==4.9.0
 django-jazzmin==3.0.4
 drf-yasg==1.21.15
