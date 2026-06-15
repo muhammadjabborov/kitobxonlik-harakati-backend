@@ -1,7 +1,6 @@
 Django==5.2.14
 psycopg2-binary==2.9.12
 djangorestframework-simplejwt==5.5.1
-adrf==0.1.12
 django-phonenumber-field==8.4.0
 phonenumbers==9.0.30
 httpx==0.28.1
