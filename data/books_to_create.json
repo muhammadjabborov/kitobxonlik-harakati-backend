@@ -1,0 +1,3482 @@
+[
+  {
+    "book_title": "O‘zbek xalq ertaklari",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "O‘zbek xalq ertaklari",
+    "mutolaa_id": 15,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sher va durroj, Hotami Toy, Qanoatli va tamagir",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Sher va durroj”, “Hotami Toy”, “Qanoatli va tamagir” hikoyatlari (“Hayrat ul­abror” dostonidan)",
+    "mutolaa_id": 1865,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bilmasvoy va do‘stlarining boshidan kechirganlari",
+    "authors": [
+      "Nikolay Nosov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Bilmasvoy va do‘stlarining boshidan kechirganlari”",
+    "mutolaa_id": 1049,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hellados",
+    "authors": [
+      "Nodar Dumbadze"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "Hellados",
+    "mutolaa_id": 254,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oygul bilan Baxtiyor",
+    "authors": [
+      "Hamid Olimjon"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Oygul bilan Baxtiyor”",
+    "mutolaa_id": 399,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Tabiat alifbosi",
+    "authors": [
+      "Abdurahmon Akbar"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Tabiat alifbosi” she’riy to‘plami",
+    "mutolaa_id": 470,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dovyuraklar",
+    "authors": [
+      "Po‘lat Mo‘min"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Dovyuraklar” she’riy to‘plami",
+    "mutolaa_id": 532,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘aroyib sinov",
+    "authors": [
+      "Otabek Quvvat"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“G‘aroyib sinov”",
+    "mutolaa_id": 3289,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Mo‘ttivoymisan, Mittivoymisan",
+    "authors": [
+      "Anvar Obidjon"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Mo‘ttivoymisan, Mittivoymisan” (qissa)",
+    "mutolaa_id": 601,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ildiz",
+    "authors": [
+      "Mualliflar jamoasi"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "1_5",
+    "original_source_title": "“Ildiz” to‘plam (hikoyalar)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Nonni bosgan qiz",
+    "authors": [
+      "Hans Kristian Andersen"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Nonni bosgan qiz” ertagi",
+    "mutolaa_id": 665,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bir bor ekan, pul bor ekan",
+    "authors": [
+      "Namoz Sa’dullayev"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Bir bor ekan, pul bor ekan” ertagi",
+    "mutolaa_id": 415,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alamazon va uning piyodalari",
+    "authors": [
+      "Anvar Obidjon"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Alamazon va uning piyodalari”",
+    "mutolaa_id": 590,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Buratino va uning sarguzashtlari",
+    "authors": [
+      "Aleksey Tolstoy"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Buratino va uning sarguzashtlari” ",
+    "mutolaa_id": 2713,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Domino",
+    "authors": [
+      "E.Seton-Tompson"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Domino” (hikoya)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Masallar",
+    "authors": [
+      "Ezop"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "Masallar",
+    "mutolaa_id": 2514,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sehrli qalpoqcha",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Sehrli qalpoqcha”",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Bolaligim",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Bolaligim” (qissa)\t",
+    "mutolaa_id": 1655,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Amir Temur haqida hikoyalar",
+    "authors": [
+      "To‘lqin Hayit"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Amir Temur haqida hikoyalar”",
+    "mutolaa_id": 312,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Shum bola",
+    "authors": [
+      "G‘afur G‘ulom"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "1_5",
+    "original_source_title": "“Shum bola” qissa ",
+    "mutolaa_id": 16,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Lison ut-tayr",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "\"Lison ut-tayr\" (doston)",
+    "mutolaa_id": 579,
+    "mutolaa_match_percentage": 91.4
+  },
+  {
+    "book_title": "Semurg‘ yoki Parizod bilan Bunyod",
+    "authors": [
+      "Hamid Olimjon"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“Semurg‘ yoki Parizod bilan Bunyod",
+    "mutolaa_id": 400,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sen yetim emassan",
+    "authors": [
+      "G'afur G'ulom"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "\"Sen yetim emassan\"(she'r)",
+    "mutolaa_id": 1291,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oltin yurakli avtobola",
+    "authors": [
+      "Anvar Obidjon"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“Oltin yurakli avtobola”",
+    "mutolaa_id": 605,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sariq devni minib",
+    "authors": [
+      "Xudoyberdi To'xtaboyev"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "\"Sariq devni minib\" ",
+    "mutolaa_id": 18,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dunyoning ishlari",
+    "authors": [
+      "O‘tkir Hoshimov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“Dunyoning ishlari”",
+    "mutolaa_id": 85,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ulug‘bek yulduzlar saltanatida",
+    "authors": [
+      "Otabek Quvvatov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“Ulug‘bek yulduzlar saltanatida\"",
+    "mutolaa_id": 2669,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Galaktikada bir kun",
+    "authors": [
+      "Sa’dullo Quronov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“Galaktikada bir kun”",
+    "mutolaa_id": 896,
+    "mutolaa_match_percentage": 96.0
+  },
+  {
+    "book_title": "To‘maris",
+    "authors": [
+      "Mirkarim Osim"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "“To‘maris” qissa",
+    "mutolaa_id": 2621,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O'n besh yoshli kapitan",
+    "authors": [
+      "Jyul Vern"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "6",
+    "original_source_title": "\"O'n besh yoshli kapitan\" ",
+    "mutolaa_id": 142,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Quyoshni ko‘ryabman",
+    "authors": [
+      "Nodar Dumbadze"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Quyoshni ko‘ryabman”",
+    "mutolaa_id": 2271,
+    "mutolaa_match_percentage": 96.2
+  },
+  {
+    "book_title": "Qush tili",
+    "authors": [
+      "Farididdin Attor"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Qush tili\" (Mantiq ut-tayr)",
+    "mutolaa_id": 629,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sudxo'rning o'limi",
+    "authors": [
+      "Sadriddin Ayniy"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Sudxo'rning o'limi\" (qissa)",
+    "mutolaa_id": 1161,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alvido, bolalik",
+    "authors": [
+      "Tohir Malik"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Alvido, bolalik”",
+    "mutolaa_id": 585,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O'g'ri, Tomoshabog', Bemor, Anor, Dahshat",
+    "authors": [
+      "Abdulla Qahhor"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"O'g'ri\", \"Tomoshabog'\", \"Bemor\", \"Anor\", \"Dahshat\" (hikoyalar)",
+    "mutolaa_id": 962,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Gulliverning sayohatlari",
+    "authors": [
+      "Jonatan Svift"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Gulliverning sayohatlari\" ",
+    "mutolaa_id": 783,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yaxshilik, Muzqaymoq",
+    "authors": [
+      "Odil Yoqubov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Yaxshilik\", \"Muzqaymoq\" (hikoyalar)",
+    "mutolaa_id": 548,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bo‘sh kelma, Aliqulov",
+    "authors": [
+      "Farhod Musajon"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Bo‘sh kelma, Aliqulov”",
+    "mutolaa_id": 2653,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Singan setor",
+    "authors": [
+      "Mirkarim Osim"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Singan setor”",
+    "mutolaa_id": 812,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Falak",
+    "authors": [
+      "Tohir Malik"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Falak\" (qissa)",
+    "mutolaa_id": 2898,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Men nechun sevaman O‘zbekistonni?",
+    "authors": [
+      "Abdulla Oripov"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Men nechun sevaman O‘zbekistonni?” (she’r)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "O'g'lim Temurga",
+    "authors": [
+      "Xurshid Davron"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"O'g'lim Temurga\",(she'ri)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Bolaligimni qo‘msab yig‘ladim",
+    "authors": [
+      "Nuri Bayramov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Bolaligimni qo‘msab yig‘ladim”",
+    "mutolaa_id": 2292,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Boychechak, Hovlidagi maydoncha",
+    "authors": [
+      "Abdusaid Ko‘chimov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Boychechak”, “Hovlidagi maydoncha” hikoyalari",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Otamga nimadir bo‘ldi…",
+    "authors": [
+      "Isajon Sulton"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Otamga nimadir bo‘ldi…” hikoyasi",
+    "mutolaa_id": 1491,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oqbo‘yin",
+    "authors": [
+      "Normurod Norqobilov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Oqbo‘yin” (qissa)",
+    "mutolaa_id": 1116,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Galaktikada bir kun (1-kitob)",
+    "authors": [
+      "Sa'dullo Quronov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Galaktikada bir kun\" \n(1-kitob)",
+    "mutolaa_id": 21,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dunyo bo‘ylab sakson kun",
+    "authors": [
+      "Jyul Vern"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Dunyo bo‘ylab sakson kun” (roman)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Maugli",
+    "authors": [
+      "Redyard Kipling"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Maugli” asari",
+    "mutolaa_id": 332,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bulut, To‘rg‘ay, Shudring, Baliq ovi, Qishlog‘im",
+    "authors": [
+      "Mirtemir"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Bulut”, “To‘rg‘ay”, “Shudring”, “Baliq ovi”, “Qishlog‘im” she’rlari",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Olimjonning sarguzashtlari yoxud zamon va makon oralig'ida",
+    "authors": [
+      "Otabek Quvvatov"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Olimjonning sarguzashtlari yoxud zamon va makon oralig'ida\"",
+    "mutolaa_id": 143,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Vatanim, Qadrdon so'qmoqlar, Izlanish, Jayxun shamollari",
+    "authors": [
+      "Ibroim Yusupov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Vatanim\", \"Qadrdon so'qmoqlar\", \"Izlanish\", \"Jayxun shamollari\" (she'rlar)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Bo‘sh kelma, Aliqulov",
+    "authors": [
+      "Farhod Musajon"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Bo‘sh kelma, Aliqulov”",
+    "mutolaa_id": 2653,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bolalik xotiralarim",
+    "authors": [
+      "Oybek"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Bolalik xotiralarim”",
+    "mutolaa_id": 276,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ohu, Turnalar, G‘anicha",
+    "authors": [
+      "Hamza Imonberdiyev"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Ohu”, “Turnalar”, “G‘anicha” she’rlari",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Champo otli ilon",
+    "authors": [
+      "Erkin Malik"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Champo otli ilon”",
+    "mutolaa_id": 396,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Jayhun ustida bulutlar",
+    "authors": [
+      "Mirkarim Osim"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Jayhun ustida bulutlar” qissa",
+    "mutolaa_id": 887,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Birinchi sinov",
+    "authors": [
+      "Hojiakbar Shayxov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "\"Birinchi sinov\" (fantastik hikoya)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Kapitan Vrungelning sarguzashtlari",
+    "authors": [
+      "Andrey Nekrasov"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "“Kapitan Vrungelning sarguzashtlari”",
+    "mutolaa_id": 1656,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Rustamxon",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "6",
+    "original_source_title": "Rustamxon",
+    "mutolaa_id": 749,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ravshan",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "Ravshan",
+    "mutolaa_id": 569,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alpomish",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Alpomish”",
+    "mutolaa_id": 48,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yulduzli tunlar",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "Yulduzli tunlar” (roman)",
+    "mutolaa_id": 268,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "So‘z chamani",
+    "authors": [
+      "Zulfiya"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“So‘z chamani”",
+    "mutolaa_id": 1247,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Galaktikada bir kun 2-kitob",
+    "authors": [
+      "Sa’dullo Quronov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Galaktikada bir kun” 2-kitob",
+    "mutolaa_id": 896,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘olib iroda",
+    "authors": [
+      "Ali Fuad Bashgil"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“G‘olib iroda”",
+    "mutolaa_id": 2788,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Onaizor",
+    "authors": [
+      "Odil Yaqubov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Onaizor” (qissa)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Chol va dengiz",
+    "authors": [
+      "Ernest Heminguey"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Chol va dengiz” (qissa)",
+    "mutolaa_id": 326,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yulduzlar mangu yonadi",
+    "authors": [
+      "Tog‘ay Murod"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Yulduzlar mangu yonadi”",
+    "mutolaa_id": 557,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Lobo",
+    "authors": [
+      "Ernest Seton-Tompson"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "7",
+    "original_source_title": "“Lobo” (hikoya)",
+    "mutolaa_id": 1933,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hazrati inson",
+    "authors": [
+      "Rahmat Fayziy"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"Hazrati inson\" (roman)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Ruboiylar",
+    "authors": [
+      "Zahiriddin Muhammad Bobur"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "Ruboiylar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Shoirning tug‘ilishi",
+    "authors": [
+      "Abdulla Oripov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Shoirning tug‘ilishi",
+    "mutolaa_id": 1487,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bolakay nidosi",
+    "authors": [
+      "Jeyms Ngugi"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Bolakay nidosi”",
+    "mutolaa_id": 1819,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Elektron chamadondan chiqqan bola",
+    "authors": [
+      "Yevgeniy Veltistov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"Elektron chamadondan chiqqan bola\" (fantastik asar)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Bir kunlik yoz",
+    "authors": [
+      "Rey Bredberi"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"Bir kunlik yoz\"(fantastik hikoya)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "O'qituvchi odam bo'lgan ekan",
+    "authors": [
+      "Ayzek Azimov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"O'qituvchi odam bo'lgan ekan\" (fantastik hikoya)",
+    "mutolaa_id": 918,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kichkina shahzoda",
+    "authors": [
+      "Antuan de Sent Ekzyuperi"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Kichkina shahzoda”",
+    "mutolaa_id": 87,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oq kema",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Oq kema”",
+    "mutolaa_id": 393,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘tmishdan ertaklar",
+    "authors": [
+      "Abdulla Qahhor"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“O‘tmishdan ertaklar”",
+    "mutolaa_id": 51,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Men, buvim, Iliko va Illarion",
+    "authors": [
+      "Nodar Dumbadze"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Men, buvim, Iliko va Illarion” (roman)",
+    "mutolaa_id": 2345,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Guliston",
+    "authors": [
+      "Sa’diy Sherzoiy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Guliston”",
+    "mutolaa_id": 1165,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Baxtli Shahzoda",
+    "authors": [
+      "Oskar Uayld"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"Baxtli Shahzoda\",",
+    "mutolaa_id": 1066,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Birinchi muallim",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Birinchi muallim”",
+    "mutolaa_id": 790,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Daftar hoshiyasidagi bitiklar",
+    "authors": [
+      "O‘tkir Hoshimov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Daftar hoshiyasidagi bitiklar”",
+    "mutolaa_id": 801,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Qiyomat qarz",
+    "authors": [
+      "O‘lmas Umarbekov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Qiyomat qarz” (hikoya)",
+    "mutolaa_id": 1130,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Adabiyot muallimi",
+    "authors": [
+      "Abdulla Qahhor"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Adabiyot muallimi”",
+    "mutolaa_id": 1037,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Daraxtlar",
+    "authors": [
+      "Iqbol Mirzo"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Daraxtlar” (she’r)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Xameleon",
+    "authors": [
+      "Anton Chexov"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Xameleon” (hikoya)",
+    "mutolaa_id": 2108,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Uloqda",
+    "authors": [
+      "Abdulla Qodiriy"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Uloqda”",
+    "mutolaa_id": 369,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ota",
+    "authors": [
+      "Nabi Jaloliddin"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Ota” (hikoya)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "O'n besh yoshli kapitan",
+    "authors": [
+      "Jyul Vern"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "\"O'n besh yoshli kapitan\" (sarguzasht roman)",
+    "mutolaa_id": 142,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Robinzon Kruzoning hayoti va ajoyib sarguzashtlari",
+    "authors": [
+      "Daniel Defo"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Robinzon Kruzoning hayoti va ajoyib sarguzashtlari”",
+    "mutolaa_id": 52,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sohil bo‘ylab chopayotgan Olapar",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Sohil bo‘ylab chopayotgan Olapar” qissa ",
+    "mutolaa_id": 1006,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Qissa",
+    "authors": [
+      "G‘afur Shermuhammad"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Qissa”",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Paxmoq",
+    "authors": [
+      "Normurod Norqobilov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Paxmoq” (qissa)",
+    "mutolaa_id": 1817,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Akramning sarguzashtlari",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Akramning sarguzashtlari”",
+    "mutolaa_id": 1355,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Suv ostida 80 ming kilometr",
+    "authors": [
+      "Jyul Vern"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Suv ostida 80 ming kilometr” roman",
+    "mutolaa_id": 333,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oq so‘yloq",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“Oq so‘yloq”",
+    "mutolaa_id": 2526,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "To‘rtko‘zning sarguzashtlari",
+    "authors": [
+      "Sunnatilla Anorboyev"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "7",
+    "original_source_title": "“To‘rtko‘zning sarguzashtlari”",
+    "mutolaa_id": 1628,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Zaynab va Omon",
+    "authors": [
+      "Hamid Olimjon"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "Zaynab va Omon",
+    "mutolaa_id": 1348,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Galaktikada bir kun 3-kitob",
+    "authors": [
+      "Sa’dullo Quronov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Galaktikada bir kun” 3-kitob",
+    "mutolaa_id": 3271,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ot kishnagan oqshom",
+    "authors": [
+      "Tog‘ay Murod"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Ot kishnagan oqshom”",
+    "mutolaa_id": 285,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ot bilan suhbat",
+    "authors": [
+      "Said Ahmad"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Ot bilan suhbat” hikoya",
+    "mutolaa_id": 29,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oq kema",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Oq kema” ",
+    "mutolaa_id": 393,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘tmishdan ertaklar",
+    "authors": [
+      "Abdulla Qahhor"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“O‘tmishdan ertaklar",
+    "mutolaa_id": 51,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Saodat sohili",
+    "authors": [
+      "Xayriddin Sultonov"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Saodat sohili” qissa",
+    "mutolaa_id": 440,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Kichkina shahzoda",
+    "authors": [
+      "Antuan de Sent Ekzyuperi"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Kichkina shahzoda”",
+    "mutolaa_id": 87,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hojimurod",
+    "authors": [
+      "Lev Tolstoy"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Hojimurod” qissa",
+    "mutolaa_id": 274,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bobilning eng boy odami",
+    "authors": [
+      "Jorj Kleyson"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "8",
+    "original_source_title": "“Bobilning eng boy odami”",
+    "mutolaa_id": 3163,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kuntug‘mish",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": " «Kuntug‘mish» dostoni. ",
+    "mutolaa_id": 745,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘azallar, Tuyuqlar",
+    "authors": [
+      "Lutfiy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "G‘azallar, Tuyuqlar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Ruboiylar, Tuyuqlar, Fardlar",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "Ruboiylar, Tuyuqlar, Fardlar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "G‘azallar",
+    "authors": [
+      "Nodira"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "G‘azallar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "G‘azallar",
+    "authors": [
+      "Muhammad Fuzuliy"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": " G‘azallar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "She’rlar",
+    "authors": [
+      "G‘afur G‘ulom"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "She’rlar",
+    "mutolaa_id": 639,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Na’matak, O‘zbekiston",
+    "authors": [
+      "Oybek"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "«Na’matak», «O‘zbekiston»",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Jaloliddin Manguberdi",
+    "authors": [
+      "Maqsud Shayxzoda"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "«Jaloliddin Manguberdi» tragediyasi",
+    "mutolaa_id": 72,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Nil va Rim, She’rlar",
+    "authors": [
+      "Usmon Nosir"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "Nil va Rim, She’rlar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Qochoq",
+    "authors": [
+      "Said Ahmad"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "Qochoq",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Chinor",
+    "authors": [
+      "Asqad Muxtor"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "Chinor",
+    "mutolaa_id": 997,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘lsam, ham ayrilmasman quchoqlaringdan",
+    "authors": [
+      "Ozod Sharafiddinov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": " O‘lsam, ham ayrilmasman quchoqlaringdan",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "She’rlar",
+    "authors": [
+      "Anvar Obidjon"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“She’rlar”",
+    "mutolaa_id": 766,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hikoyalar",
+    "authors": [
+      "Shukur Xolmirzayev"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": " Hikoyalar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "She’rlar",
+    "authors": [
+      "Muhammad Yusuf"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "She’rlar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Shubxa",
+    "authors": [
+      "Robindranath Thakur"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "«Shubxa» hikoyasi",
+    "mutolaa_id": 354,
+    "mutolaa_match_percentage": 99.1
+  },
+  {
+    "book_title": "She’rlar",
+    "authors": [
+      "Sergey Yesenin"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "She’rlar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Oq so‘yloq",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Oq so‘yloq”",
+    "mutolaa_id": 2526,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G’aroyib bolalar",
+    "authors": [
+      "Aziz Nesin"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“G’aroyib bolalar”",
+    "mutolaa_id": 442,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Quyonlar saltanati",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Quyonlar saltanati”",
+    "mutolaa_id": 750,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Tom tog‘aning kulbasi",
+    "authors": [
+      "Garriyet Bitcher-Stou"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Tom tog‘aning kulbasi”",
+    "mutolaa_id": 1026,
+    "mutolaa_match_percentage": 99.9
+  },
+  {
+    "book_title": "Yulduzli tunlar",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Yulduzli tunlar”",
+    "mutolaa_id": 268,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Urushning so‘nggi qurboni",
+    "authors": [
+      "O‘tkir Hoshimov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Urushning so‘nggi qurboni” hikoya",
+    "mutolaa_id": 1283,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Birinchi muallim",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Birinchi muallim”“",
+    "mutolaa_id": 790,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Springfild tulkisi",
+    "authors": [
+      "Ernest Seton-Tompson"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Springfild tulkisi”",
+    "mutolaa_id": 1932,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Uch mushketyor",
+    "authors": [
+      "Aleksandr Dyuma"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Uch mushketyor” roman",
+    "mutolaa_id": 981,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oliver Tvistning boshidan kechirganlari",
+    "authors": [
+      "Charlz Dikkens"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Oliver Tvistning boshidan kechirganlari” (roman)",
+    "mutolaa_id": 67,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dunyoning ishlari",
+    "authors": [
+      "O‘tkir Hoshimov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Dunyoning ishlari”",
+    "mutolaa_id": 85,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Men, buvim, Iliko va Illarion",
+    "authors": [
+      "Nodar Dumbadze"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Men, buvim, Iliko va Illarion” (roman)",
+    "mutolaa_id": 2345,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Maugli",
+    "authors": [
+      "Redyard Kipling"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "8",
+    "original_source_title": "“Maugli” asari",
+    "mutolaa_id": 332,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Atom odatlar",
+    "authors": [
+      "Jeyms Klir"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Atom odatlar”",
+    "mutolaa_id": 2176,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ulug‘bek xazinasi",
+    "authors": [
+      "Odil Yoqubov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Ulug‘bek xazinasi”",
+    "mutolaa_id": 140,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alpomish",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Alpomish” dostoni",
+    "mutolaa_id": 48,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Mehrobdan chayon",
+    "authors": [
+      "Abdulla Qodiriy"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Mehrobdan chayon”",
+    "mutolaa_id": 469,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Asrga tatigulik kun",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "\"Asrga tatigulik kun\" romani",
+    "mutolaa_id": 574,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alisher Navoiy",
+    "authors": [
+      "Isojon Sulton"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Alisher Navoiy” roman",
+    "mutolaa_id": 1429,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Yuz yillik qotillik",
+    "authors": [
+      "Xurshid Do‘stmuhammad"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Yuz yillik qotillik” qissa",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Mening Dog‘istonim",
+    "authors": [
+      "Rasul Hamzatov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Mening Dog‘istonim”",
+    "mutolaa_id": 429,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Javohir",
+    "authors": [
+      "Jon Steynbek"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "“Javohir”",
+    "mutolaa_id": 1078,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hamlet",
+    "authors": [
+      "Uilyam Shekspir"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "9",
+    "original_source_title": "\"Hamlet\" fojiasi",
+    "mutolaa_id": 1231,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kuntug‘mish",
+    "authors": [
+      "O‘zbek xalq qahramonlik dostoni"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Kuntug‘mish\"",
+    "mutolaa_id": 745,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Farhod va Shirin",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Farhod va Shirin\"",
+    "mutolaa_id": 280,
+    "mutolaa_match_percentage": 89.2
+  },
+  {
+    "book_title": "Hikoyatlar va g‘azallar",
+    "authors": [
+      "Xoja"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "Hikoyatlar va g‘azallar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Sarvqomat dilbarim",
+    "authors": [
+      "Chingiz Aytmatov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Sarvqomat dilbarim”",
+    "mutolaa_id": 392,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘azallar, Musaddas va Kashmirda",
+    "authors": [
+      "Zokirjon Xolmuhammad o‘g‘li Furqat"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "G‘azallar, Musaddas va \"Kashmirda\"",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Hadislar",
+    "authors": [
+      "Imom al-Buxoriy"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "Hadislar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Navoiy",
+    "authors": [
+      "Oybek"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Navoiy\" romani",
+    "mutolaa_id": 74,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Muqaddas",
+    "authors": [
+      "Odil Yoqubov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Muqaddas”",
+    "mutolaa_id": 64,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Sohibqiron dramasi va she'rlar",
+    "authors": [
+      "Abdulla Oripov"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Sohibqiron\" dramasi va she'rlar",
+    "mutolaa_id": 959,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Vatan mehri, Avvalgilarg‘a o‘xshamas, Eng so‘nggi xazina",
+    "authors": [
+      "Omon Matjon"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Vatan mehri\", \"Avvalgilarg‘a o‘xshamas\", \"Eng so‘nggi xazina\"",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Dorilomon kunlar keldi, Begim, sizni tabiat",
+    "authors": [
+      "Halima Xudoyberdiyeva"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Dorilomon kunlar keldi\", \"Begim, sizni tabiat...\"",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Tong ochar ko‘zlarin, Turkiylar, Jangda o‘lgan emas biror bahodir",
+    "authors": [
+      "Shavkat Rahmon"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Tong ochar ko‘zlarin\", \"Turkiylar\", \"Jangda o‘lgan emas biror bahodir\"",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Temir xotin",
+    "authors": [
+      "Sharof Boshbekov"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "\"Temir xotin\" komediyasi",
+    "mutolaa_id": 77,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Quduq",
+    "authors": [
+      "G‘ofur Shermuhammad"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Quduq”",
+    "mutolaa_id": 640,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Oqbo‘yin",
+    "authors": [
+      "Normurod Norqobilov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Oqbo‘yin”",
+    "mutolaa_id": 1116,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hayotga muhabbat",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Hayotga muhabbat”",
+    "mutolaa_id": 281,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hind sayyohining qissasi",
+    "authors": [
+      "Fitrat"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Hind sayyohining qissasi”",
+    "mutolaa_id": 50,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yuz yil sarson-sargardonlikda",
+    "authors": [
+      "Erkin Malik"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Yuz yil sarson-sargardonlikda” (qissa)",
+    "mutolaa_id": 1482,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dashti qipchoq lochini",
+    "authors": [
+      "Sa’dulla Siyoyev"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Dashti qipchoq lochini” (qissa)",
+    "mutolaa_id": 730,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oydinda yurgan odamlar",
+    "authors": [
+      "Tog‘ay Murod"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Oydinda yurgan odamlar” (qissa)",
+    "mutolaa_id": 575,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Umrim daryosi",
+    "authors": [
+      "Erkin Vohidov"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Umrim daryosi” (she’rlar)",
+    "mutolaa_id": 2347,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yolg‘iz",
+    "authors": [
+      "Xurshid Do‘stmuhammad"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Yolg‘iz” (qissa)",
+    "mutolaa_id": 1332,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Eljernonga atalgan gullar",
+    "authors": [
+      "Daniel Kiz"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Eljernonga atalgan gullar”",
+    "mutolaa_id": 2206,
+    "mutolaa_match_percentage": 99.6
+  },
+  {
+    "book_title": "Sohilsiz dengiz",
+    "authors": [
+      "Ahmad Muhammad Tursun"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Sohilsiz dengiz”",
+    "mutolaa_id": 565,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Abu Rayhon Beruniy",
+    "authors": [
+      "Isajon Sulton"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Abu Rayhon Beruniy”",
+    "mutolaa_id": 1334,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ishonch telefoni",
+    "authors": [
+      "Xayriddin Sultonov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Ishonch telefoni”",
+    "mutolaa_id": 1237,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Momaqaymoq",
+    "authors": [
+      "Rey Bredberi"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": " “Momaqaymoq” (qissa)",
+    "mutolaa_id": 728,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Otam haqida",
+    "authors": [
+      "Habibulla Qodiriy"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Otam haqida”",
+    "mutolaa_id": 3262,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alkimyogar",
+    "authors": [
+      "Paulo Koelo"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Alkimyogar”",
+    "mutolaa_id": 17,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Chinor",
+    "authors": [
+      "Asqad Muxtor"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Chinor”",
+    "mutolaa_id": 997,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘gay ona",
+    "authors": [
+      "Ahmad Lutfiy qozonchi"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“O‘gay ona”",
+    "mutolaa_id": 830,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Xo‘jand qal’asi",
+    "authors": [
+      "Mirmuhsin"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Xo‘jand qal’asi”",
+    "mutolaa_id": 703,
+    "mutolaa_match_percentage": 89.2
+  },
+  {
+    "book_title": "Besh bolali yigitcha",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Besh bolali yigitcha”",
+    "mutolaa_id": 787,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Jaloliddin Rumiy",
+    "authors": [
+      "Radiy Fish"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Jaloliddin Rumiy”",
+    "mutolaa_id": 723,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Farg‘ona kelini",
+    "authors": [
+      "Jo‘rjiy Zaydon"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Farg‘ona kelini”",
+    "mutolaa_id": 2624,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kafansiz ko‘milganlar",
+    "authors": [
+      "Shukrullo"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Kafansiz ko‘milganlar”",
+    "mutolaa_id": 733,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Molxona",
+    "authors": [
+      "Jorj Oruel"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Molxona”",
+    "mutolaa_id": 2177,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Avlodlar dovoni",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Avlodlar dovoni”",
+    "mutolaa_id": 558,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oybegim mening",
+    "authors": [
+      "Zarifa Saidnosirova"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Oybegim mening”",
+    "mutolaa_id": 1734,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Taras Bulba",
+    "authors": [
+      "Nikolay Gogol"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "9",
+    "original_source_title": "“Taras Bulba” roman",
+    "mutolaa_id": 1591,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kecha va kunduz",
+    "authors": [
+      "Abdulhamid Cho‘lpon"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Kecha va kunduz” roman",
+    "mutolaa_id": 950,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘tkan kunlar",
+    "authors": [
+      "Abdulla Qodiriy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“O‘tkan kunlar”",
+    "mutolaa_id": 106,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oltin zanglamas",
+    "authors": [
+      "Shuhrat"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Oltin zanglamas”",
+    "mutolaa_id": 110,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Saddi Iskandaiy",
+    "authors": [
+      "Alisher Navoi"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Saddi Iskandaiy” doston",
+    "mutolaa_id": 2370,
+    "mutolaa_match_percentage": 99.9
+  },
+  {
+    "book_title": "Go‘ro‘g‘lining tug‘ilishi",
+    "authors": [
+      "Xalq og‘zaki ijodi"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Go‘ro‘g‘lining tug‘ilishi” doston",
+    "mutolaa_id": 1600,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Qutadg‘u bilig",
+    "authors": [
+      "Yusuf Xos Hojib"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Qutadg‘u bilig”",
+    "mutolaa_id": 367,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Turkiston qayg‘usi",
+    "authors": [
+      "Alixonto‘ra Sog‘uniy"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Turkiston qayg‘usi”",
+    "mutolaa_id": 320,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Mantiqiy xato: to‘g‘ri fikrlash qo‘llanmasi",
+    "authors": [
+      "Bo Bennett"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Mantiqiy xato: to‘g‘ri fikrlash qo‘llanmasi”",
+    "mutolaa_id": 2907,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Madaminbek. Qonli gular vodiysi",
+    "authors": [
+      "Baxtiyor Abdug‘ofur"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Madaminbek. Qonli gullar vodiysi” (roman)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Xalq bo‘l, elim",
+    "authors": [
+      "Muhammad Yusuf"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "10",
+    "original_source_title": "“Xalq bo‘l, elim” (she’rlar)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Go‘ro‘g‘lining tug‘ilishi",
+    "authors": [
+      "Xalq dostoni (Go‘ro‘g‘li turkumi)"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Go‘ro‘g‘lining tug‘ilishi”",
+    "mutolaa_id": 1600,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Iliada",
+    "authors": [
+      "Homer"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Iliada\" ",
+    "mutolaa_id": 1343,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Odisseya",
+    "authors": [
+      "Homer"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Odisseya\" ",
+    "mutolaa_id": 1347,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alpomish",
+    "authors": [
+      "Xalq qahramonlik dostoni"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Alpomish\"",
+    "mutolaa_id": 48,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Qutadg‘u bilig",
+    "authors": [
+      "Yusuf Xos Hojib"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Qutadg‘u bilig\"",
+    "mutolaa_id": 367,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Saddi Iskandariy",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Saddi Iskandariy\"(Xamsa)",
+    "mutolaa_id": 2370,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Don Kixot sarguzashtlari",
+    "authors": [
+      "Migel de Servantes Saavedra"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Don Kixot sarguzashtlari\"",
+    "mutolaa_id": 656,
+    "mutolaa_match_percentage": 92.8
+  },
+  {
+    "book_title": "G‘azallar",
+    "authors": [
+      "Boborahim Mashrab"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "G‘azallar",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Lirik meros",
+    "authors": [
+      "Muhammad Rizo Ogahiy"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "Lirik meros",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Otoyining tug‘ilgan yili",
+    "authors": [
+      "Erkin A’zam"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "Otoyining tug‘ilgan yili”",
+    "mutolaa_id": 876,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Muvozanat",
+    "authors": [
+      "Ulug‘bek Hamdam"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Muvozanat”",
+    "mutolaa_id": 84,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alvon yelkanlar",
+    "authors": [
+      "Aleksandr Grin"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Alvon yelkanlar”",
+    "mutolaa_id": 319,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yevgeniy Onegin",
+    "authors": [
+      "Aleksandr Pushkin"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Yevgeniy Onegin\" (she’riy roman)",
+    "mutolaa_id": 983,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Abulfayzxon",
+    "authors": [
+      "Abdurauf Fitrat"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"Abulfayzxon\" (fojia)",
+    "mutolaa_id": 974,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘arbiy frontda o‘zgarish yo‘q",
+    "authors": [
+      "Erix Mariya Remark"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "\"G‘arbiy frontda o‘zgarish yo‘q\"",
+    "mutolaa_id": 868,
+    "mutolaa_match_percentage": 92.8
+  },
+  {
+    "book_title": "Martin Iden",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Martin Iden”",
+    "mutolaa_id": 402,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Hind sayyohining qissasi",
+    "authors": [
+      "Fitrat"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Hind sayyohining qissasi”",
+    "mutolaa_id": 50,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yuz yil sarson-sargardonlikda",
+    "authors": [
+      "Erkin Malik"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Yuz yil sarson-sargardonlikda” (qissa)",
+    "mutolaa_id": 1482,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Dashti qipchoq lochini",
+    "authors": [
+      "Sa’dulla Siyoyev"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Dashti qipchoq lochini” (qissa)",
+    "mutolaa_id": 730,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Oydinda yurgan odamlar",
+    "authors": [
+      "Tog‘ay Murod"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Oydinda yurgan odamlar” (qissa)",
+    "mutolaa_id": 575,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Umrim daryosi",
+    "authors": [
+      "Erkin Vohidov"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Umrim daryosi” (she’rlar)",
+    "mutolaa_id": 2347,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Odam bo‘lish qiyin",
+    "authors": [
+      "O‘lmas Umarbekov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Odam bo‘lish qiyin” roman",
+    "mutolaa_id": 65,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ajdodlar nidosi",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Ajdodlar nidosi” (qissa)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Sohilsiz dengiz",
+    "authors": [
+      "Ahmad Muhammad Tursun"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Sohilsiz dengiz”",
+    "mutolaa_id": 565,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Abu Rayhon Beruniy",
+    "authors": [
+      "Isajon Sulton"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Abu Rayhon Beruniy”",
+    "mutolaa_id": 1334,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yaldo kechasi",
+    "authors": [
+      "Xayriddin Sultonov"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Yaldo kechasi” roman ",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Mungli ko‘zlar",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": " “Mungli ko‘zlar”",
+    "mutolaa_id": 2656,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Otam haqida",
+    "authors": [
+      "Habibulla Qodiriy"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Otam haqida”",
+    "mutolaa_id": 3262,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alkimyogar",
+    "authors": [
+      "Paulo Koelo"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Alkimyogar”",
+    "mutolaa_id": 17,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Chinor",
+    "authors": [
+      "Asqad Muxtor"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Chinor”",
+    "mutolaa_id": 997,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘gay ona",
+    "authors": [
+      "Ahmad Lutfiy qozonchi"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“O‘gay ona”",
+    "mutolaa_id": 830,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Xo‘jand qal’asi",
+    "authors": [
+      "Mirmuhsin"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Xo‘jand qal’asi”",
+    "mutolaa_id": 703,
+    "mutolaa_match_percentage": 89.2
+  },
+  {
+    "book_title": "Besh bolali yigitcha",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Besh bolali yigitcha”",
+    "mutolaa_id": 787,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Jaloliddin Rumiy",
+    "authors": [
+      "Radiy Fish"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Jaloliddin Rumiy”",
+    "mutolaa_id": 723,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Farg‘ona kelini",
+    "authors": [
+      "Jo‘rjiy Zaydon"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Farg‘ona kelini”",
+    "mutolaa_id": 2624,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Kafansiz ko‘milganlar",
+    "authors": [
+      "Shukrullo"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Kafansiz ko‘milganlar”",
+    "mutolaa_id": 733,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Molxona",
+    "authors": [
+      "Jorj Oruel"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Molxona”",
+    "mutolaa_id": 2177,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Avlodlar dovoni",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Avlodlar dovoni”",
+    "mutolaa_id": 558,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Puankare",
+    "authors": [
+      "Abduqayum Yo‘ldoshev"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Puankare”",
+    "mutolaa_id": 562,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Taras Bulba",
+    "authors": [
+      "Nikolay Gogol"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "10",
+    "original_source_title": "“Taras Bulba” roman",
+    "mutolaa_id": 1591,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Temur tuzuklari",
+    "authors": [
+      "Amir Temur"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Temur tuzuklari”",
+    "mutolaa_id": 75,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Factfulness",
+    "authors": [
+      "Hans Rosling"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Factfulness”",
+    "mutolaa_id": 2228,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Boburnoma",
+    "authors": [
+      "Zahiriddin Muhammad Bobur"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Boburnoma”",
+    "mutolaa_id": 758,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Otamdan qolgan dalalar",
+    "authors": [
+      "Tog‘ay Murod"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Otamdan qolgan dalalar”",
+    "mutolaa_id": 53,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ruhlar isyoni",
+    "authors": [
+      "Erkin Vohidov"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Ruhlar isyoni” (she’rlar)",
+    "mutolaa_id": 325,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Abu Rayhon Beruniy",
+    "authors": [
+      "Isojon Sulton"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Abu Rayhon Beruniy” roman",
+    "mutolaa_id": 1334,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Qo‘rqma",
+    "authors": [
+      "Javlon Jovliyev"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Qo‘rqma”",
+    "mutolaa_id": 2190,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ufq",
+    "authors": [
+      "Said Ahmad"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Ufq” trilogiya",
+    "mutolaa_id": 1177,
+    "mutolaa_match_percentage": 89.2
+  },
+  {
+    "book_title": "Kecha va kunduz",
+    "authors": [
+      "Abdulhamid Cho‘lpon"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“Kecha va kunduz” roman",
+    "mutolaa_id": 950,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "O‘tkan kunlar",
+    "authors": [
+      "Abdulla Qodiriy"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": true,
+    "grade": "11",
+    "original_source_title": "“O‘tkan kunlar”",
+    "mutolaa_id": 106,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Go‘ro‘g‘lining tug‘ilishi",
+    "authors": [
+      "Xalq qahramonlik dostoni"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Go‘ro‘g‘lining tug‘ilishi\"",
+    "mutolaa_id": 1600,
+    "mutolaa_match_percentage": 99.7
+  },
+  {
+    "book_title": "Devonu lug‘ot at-turk",
+    "authors": [
+      "Mahmud Koshg‘ariy"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "Devonu lug‘ot at-turk",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Alp Er To‘nga marsiyasi",
+    "authors": [
+      "Qadimgi turkiy xalq og‘zaki ijodi namunasi"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Alp Er To‘nga marsiyasi\"",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Zamonamiz qahramoni",
+    "authors": [
+      "Mixail Lermontov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Zamonamiz qahramoni”",
+    "mutolaa_id": 1101,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Qutadg‘u bilig",
+    "authors": [
+      "Yusuf Xos Hojib"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Qutadg‘u bilig\"",
+    "mutolaa_id": 367,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Qisasi Rabg‘uziy",
+    "authors": [
+      "Nosiruddin Rabg‘uziy"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Qisasi Rabg‘uziy\"",
+    "mutolaa_id": 88,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Kun hamalga kirdi",
+    "authors": [
+      "Nosiruddin Rabg‘uziy"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Kun hamalga kirdi...\" (she’r)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Saddi Iskandariy",
+    "authors": [
+      "Alisher Navoiy"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "\"Saddi Iskandariy\" (Xamsa tarkibidagi doston)",
+    "mutolaa_id": 2370,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "G‘azallar va lirik meros",
+    "authors": [
+      "Zahiriddin Muhammad Bobur"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "G‘azallar va lirik meros",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Sohilsiz dengiz",
+    "authors": [
+      "Ahmad Muhammad Tursun"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": " “Sohilsiz dengiz”",
+    "mutolaa_id": 565,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Abu Rayhon Beruniy",
+    "authors": [
+      "Isajon Sulton"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": " “Abu Rayhon Beruniy”",
+    "mutolaa_id": 1334,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Yaldo kechasi",
+    "authors": [
+      "Xayriddin Sultonov"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Yaldo kechasi” roman ",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Lirik namunalar",
+    "authors": [
+      "Boborahim Mashrab"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "Lirik namunalar (G‘azal, Murabba’, Muxammas)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Mungli ko‘zlar",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": " “Mungli ko‘zlar”",
+    "mutolaa_id": 2656,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Otam haqida",
+    "authors": [
+      "Habibulla Qodiriy"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Otam haqida”",
+    "mutolaa_id": 3262,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Alkimyogar",
+    "authors": [
+      "Paulo Koelo"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Alkimyogar”",
+    "mutolaa_id": 17,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Chinor",
+    "authors": [
+      "Asqad Muxtor"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Chinor”",
+    "mutolaa_id": 997,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Buyuk Getsbi",
+    "authors": [
+      "Frensis Skot Fitsjerald"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Buyuk Getsbi”",
+    "mutolaa_id": 835,
+    "mutolaa_match_percentage": 99.9
+  },
+  {
+    "book_title": "Choliqushi",
+    "authors": [
+      "Rashod Nuri Guntekin"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«Choliqushi» (roman)",
+    "mutolaa_id": 2252,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Bir vijdon uyg‘onur",
+    "authors": [
+      "Ahmad Lutfiy qozonchi"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Bir vijdon uyg‘onur”",
+    "mutolaa_id": 2493,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Xo‘jand qal’asi",
+    "authors": [
+      "Mirmuhsin"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Xo‘jand qal’asi”",
+    "mutolaa_id": 703,
+    "mutolaa_match_percentage": 89.2
+  },
+  {
+    "book_title": "Besh bolali yigitcha",
+    "authors": [
+      "Xudoyberdi To‘xtaboyev"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Besh bolali yigitcha”",
+    "mutolaa_id": 787,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Adabiyot qonuni",
+    "authors": [
+      "Nodar Dumbadze"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Adabiyot qonuni”",
+    "mutolaa_id": 528,
+    "mutolaa_match_percentage": 85.6
+  },
+  {
+    "book_title": "Tong otmoqda, Yomg‘ir yog‘ar, Yoz kechasi, Yana qaytib keldim..., Yurak",
+    "authors": [
+      "Rauf Parfi"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«Tong otmoqda», «Yomg‘ir yog‘ar», «Yoz kechasi», «Yana qaytib keldim...», «Yurak» (she’riy turkum)",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Doktor Moro oroli",
+    "authors": [
+      "Gerbert Uells"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Doktor Moro” oroli",
+    "mutolaa_id": 1643,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Reklama qurboni",
+    "authors": [
+      "Emil Zolya"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Reklama qurboni”",
+    "mutolaa_id": 2277,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Grafika",
+    "authors": [
+      "Usmon Azim"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«Grafika»",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Chernobil tavallosi",
+    "authors": [
+      "Svetlana Alekseyevich"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Chernobil tavallosi”",
+    "mutolaa_id": 2195,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Oshkora qotillik qissasi",
+    "authors": [
+      "Gabriel Garsiya Markes"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Oshkora qotillik qissasi”",
+    "mutolaa_id": 769,
+    "mutolaa_match_percentage": 99.9
+  },
+  {
+    "book_title": "Vatan",
+    "authors": [
+      "Sirojiddin Sayyid"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«Vatan»",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "O‘zbek",
+    "authors": [
+      "Iqbol Mirzo"
+    ],
+    "month_start": "2026-05-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«O‘zbek»",
+    "mutolaa_id": null,
+    "mutolaa_match_percentage": 0.0
+  },
+  {
+    "book_title": "Ustasi farang o‘g‘rilar",
+    "authors": [
+      "Agata Kristi"
+    ],
+    "month_start": "2026-06-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Ustasi farang o‘g‘rilar”",
+    "mutolaa_id": 541,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ibn Sino",
+    "authors": [
+      "Maqsud Qoriyev"
+    ],
+    "month_start": "2026-07-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Ibn Sino”",
+    "mutolaa_id": 699,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Garov",
+    "authors": [
+      "Anton Pavlovich Chexov"
+    ],
+    "month_start": "2026-08-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "«Garov» (hikoya)",
+    "mutolaa_id": 1232,
+    "mutolaa_match_percentage": 99.5
+  },
+  {
+    "book_title": "Maymun yetaklagan odam",
+    "authors": [
+      "Nazar Eshonqul"
+    ],
+    "month_start": "2026-09-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Maymun yetaklagan odam”",
+    "mutolaa_id": 347,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Ultontoz",
+    "authors": [
+      "Olim Toshboyev"
+    ],
+    "month_start": "2026-10-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Ultontoz”",
+    "mutolaa_id": 1122,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Martin Iden",
+    "authors": [
+      "Jek London"
+    ],
+    "month_start": "2026-11-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Martin Iden” roman",
+    "mutolaa_id": 402,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Molxona",
+    "authors": [
+      "Jorj Oruel"
+    ],
+    "month_start": "2026-12-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Molxona”",
+    "mutolaa_id": 2177,
+    "mutolaa_match_percentage": 99.8
+  },
+  {
+    "book_title": "Avlodlar dovoni",
+    "authors": [
+      "Pirimqul Qodirov"
+    ],
+    "month_start": "2027-01-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Avlodlar dovoni”",
+    "mutolaa_id": 558,
+    "mutolaa_match_percentage": 100.0
+  },
+  {
+    "book_title": "Puankare",
+    "authors": [
+      "Abduqayum Yo‘ldoshev"
+    ],
+    "month_start": "2027-02-01",
+    "is_mandatory": false,
+    "grade": "11",
+    "original_source_title": "“Puankare”",
+    "mutolaa_id": 562,
+    "mutolaa_match_percentage": 100.0
+  }
+]

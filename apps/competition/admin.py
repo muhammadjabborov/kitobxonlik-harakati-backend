@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from apps.competition.models import (
     CompetitionMonth,
+    CompetitionMonthBook,
     CompetitionMonthGrade,
     CompetitionSeason,
 )
@@ -14,11 +15,18 @@ class CompetitionSeasonAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at", "updated_at")
 
 
+class CompetitionMonthBookInline(admin.StackedInline):
+    model = CompetitionMonthBook
+    extra = 0
+    fields = ("book", "is_required")
+    autocomplete_fields = ("book",)
+    show_change_link = True
+
+
 class CompetitionMonthGradeInline(admin.StackedInline):
     model = CompetitionMonthGrade
     extra = 0
-    fields = ("grade", "books")
-    filter_horizontal = ("books",)
+    fields = ("grade",)
     show_change_link = True
 
 
@@ -37,5 +45,6 @@ class CompetitionMonthGradeAdmin(admin.ModelAdmin):
     list_display = ("__str__", "month", "grade")
     list_filter = ("grade", "month__season")
     search_fields = ("month__season__title",)
-    filter_horizontal = ("books",)
+    autocomplete_fields = ("month",)
     readonly_fields = ("created_at", "updated_at")
+    inlines = [CompetitionMonthBookInline]

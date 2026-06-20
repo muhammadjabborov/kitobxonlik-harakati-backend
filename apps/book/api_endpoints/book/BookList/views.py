@@ -37,7 +37,7 @@ class BookListView(generics.ListAPIView):
         return (
             Book.objects.filter(is_active=True)
             .prefetch_related("authors", "genres")
-            .order_by("order", "-id")
+            .order_by("-id")
         )
 
 

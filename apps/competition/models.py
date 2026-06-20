@@ -61,11 +61,6 @@ class CompetitionMonthGrade(BaseModel):
         max_length=10,
         choices=GradeChoices.choices,
     )
-    books = models.ManyToManyField(
-        "book.Book",
-        verbose_name=_("Books"),
-        blank=True,
-    )
 
     class Meta:
         verbose_name = _("Competition month grade")
@@ -79,3 +74,32 @@ class CompetitionMonthGrade(BaseModel):
 
     def __str__(self):
         return f"{self.month} ({self.grade})"
+
+
+class CompetitionMonthBook(BaseModel):
+    month_grade = models.ForeignKey(
+        CompetitionMonthGrade,
+        verbose_name=_("Month grade"),
+        on_delete=models.CASCADE,
+        related_name="books",
+    )
+    book = models.ForeignKey(
+        "book.Book",
+        verbose_name=_("Book"),
+        on_delete=models.CASCADE,
+        related_name="competition_month_books",
+    )
+    is_required = models.BooleanField(verbose_name=_("Is required"), default=False)
+
+    class Meta:
+        verbose_name = _("Competition month book")
+        verbose_name_plural = _("Competition month books")
+        constraints = [
+            models.UniqueConstraint(
+                fields=["month_grade", "book"],
+                name="unique_competition_month_book",
+            ),
+        ]
+
+    def __str__(self):
+        return f"{self.month_grade} ({self.book})"
