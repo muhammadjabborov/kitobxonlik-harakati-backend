@@ -289,6 +289,7 @@ class ImportCompetitionBooksService:
                 stats["books_created"] += 1
             else:
                 stats["books_reused"] += 1
+                self._update_book_title(book, title, stats)
 
             self._cache_book(
                 book,
@@ -326,6 +327,7 @@ class ImportCompetitionBooksService:
             stats["books_created"] += 1
         else:
             stats["books_reused"] += 1
+            self._update_book_title(book, title, stats)
 
         for author in authors:
             if not book.authors.filter(pk=author.pk).exists():
@@ -340,6 +342,14 @@ class ImportCompetitionBooksService:
         )
 
         return book
+
+    def _update_book_title(self, book, title, stats):
+        if book.title == title:
+            return
+
+        book.title = title
+        book.save(update_fields=["title", "updated_at"])
+        stats["books_updated"] += 1
 
     def _cache_book(
         self,

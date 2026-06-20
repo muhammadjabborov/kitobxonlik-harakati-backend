@@ -107,9 +107,10 @@ class MutolaaBookSyncService:
 
         title = self._clean_value(data.get("title"))
         if title and self.book.title != title:
-            self._log(f"Updating book title to '{title}'.")
-            self.book.title = title
-            update_fields.append("title")
+            self._log(
+                f"Keeping existing book title '{self.book.title}'. "
+                f"Mutolaa API title is '{title}'."
+            )
 
         mutolaa_id = self._clean_mutolaa_id(data.get("id"))
         if mutolaa_id and self.book.mutolaa_id != mutolaa_id:
