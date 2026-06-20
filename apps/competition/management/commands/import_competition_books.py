@@ -10,7 +10,7 @@ from apps.competition.services.import_competition_books import (
 class Command(BaseCommand):
     """
     example:
-    python manage.py import_competition_books --path data/books_to_create.json
+    python manage.py import_competition_books --path data/books_to_create.json --process-books-without-mutolaa-id=false
     """
 
     help = "Import competition books from data/books_to_create.json"
@@ -21,9 +21,24 @@ class Command(BaseCommand):
             default=str(settings.BASE_DIR / "data" / "books_to_create.json"),
             help="Path to the generated competition books JSON file.",
         )
+        parser.add_argument(
+            "--process-books-without-mutolaa-id",
+            "--include-books-without-mutolaa-id",
+            action="store_true",
+            dest="process_books_without_mutolaa_id",
+            help=(
+                "Also import JSON records without mutolaa_id. Authors are only "
+                "processed for those records."
+            ),
+        )
 
     def handle(self, *args, **options):
-        service = ImportCompetitionBooksService(path=options["path"])
+        service = ImportCompetitionBooksService(
+            path=options["path"],
+            process_books_without_mutolaa_id=options[
+                "process_books_without_mutolaa_id"
+            ],
+        )
 
         try:
             stats = service.import_books()
@@ -40,6 +55,10 @@ class Command(BaseCommand):
             (
                 "Records skipped without mutolaa id",
                 "records_skipped_without_mutolaa_id",
+            ),
+            (
+                "Records processed without mutolaa id",
+                "records_processed_without_mutolaa_id",
             ),
             ("Competition months created", "competition_months_created"),
             ("Competition months reused", "competition_months_reused"),

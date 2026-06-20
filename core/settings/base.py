@@ -196,6 +196,14 @@ CELERY_TIMEZONE = "Asia/Tashkent"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
+
+KITOBXONLIK_HARAKATI_CONFIG = {
+    "base_url": env.str("MUTOLAA_BASE_URL", ""),
+    "username": env.str("KITOBXONLIK_HARAKATI_USERNAME", ""),
+    "password": env.str("KITOBXONLIK_HARAKATI_PASSWORD", ""),
+    "timeout": env.int("MUTOLAA_API_TIMEOUT", 30),
+}
+
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
