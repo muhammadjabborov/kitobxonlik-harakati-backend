@@ -10,7 +10,7 @@ from apps.competition.services.import_competition_books import (
 class Command(BaseCommand):
     """
     example:
-    python manage.py import_competition_books --path data/books_to_create.json --process-books-without-mutolaa-id=false
+    python manage.py import_competition_books --path data/books_to_create.json --process-books-without-mutolaa-id
     """
 
     help = "Import competition books from data/books_to_create.json"
