@@ -15,12 +15,6 @@ class HomeBookListSerializer(serializers.ModelSerializer):
             "title",
             "slug",
             "image",
-            "published_year",
             "authors",
             "genres",
-            "page_count",
-            "grades",
-            "featured_date",
-            "is_active",
-            "order",
         )

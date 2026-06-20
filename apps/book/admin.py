@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from apps.book.models import AudioFile, Author, Book, Genre, Language, PlanToRead
+from apps.book.models import AudioFile, Author, Book, Genre, PlanToRead
 
 
-class AudioFileInline(admin.TabularInline):
+class AudioFileInline(admin.StackedInline):
     model = AudioFile
     extra = 0
     fields = ("order", "title", "file", "duration")
@@ -22,19 +22,16 @@ class GenreAdmin(admin.ModelAdmin):
     list_editable = ("order",)
 
 
-@admin.register(Language)
-class LanguageAdmin(admin.ModelAdmin):
-    list_display = ("name", "code")
-
-
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = (
-        "title", "grades", "featured_date",
-        "published_year", "language", "page_count", "is_active", "order",
+        "id",
+        "title",
+        "mutolaa_id",
+        "is_active",
     )
-    list_editable = ("is_active", "order")
-    list_filter = ("is_active", "language", "genres", "grades", "featured_date")
+    list_editable = ("is_active",)
+    list_filter = ("is_active", "genres", "mutolaa_id")
     search_fields = ("title", "slug")
     prepopulated_fields = {"slug": ("title",)}
     filter_horizontal = ("authors", "genres")

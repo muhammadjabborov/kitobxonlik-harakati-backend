@@ -4,7 +4,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.models import BaseModel
-from apps.users.choices import GradeChoices
 
 
 class Author(BaseModel):
@@ -15,6 +14,9 @@ class Author(BaseModel):
         blank=True,
         verbose_name=_("Image"),
         max_length=255,
+    )
+    mutolaa_id = models.CharField(
+        max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
     )
 
     class Meta:
@@ -27,6 +29,9 @@ class Author(BaseModel):
 
 class Genre(BaseModel):
     title = models.CharField(max_length=255, verbose_name=_("Title"))
+    mutolaa_id = models.CharField(
+        max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
+    )
     order = models.PositiveSmallIntegerField(verbose_name=_("Order"), default=0)
 
     class Meta:
@@ -36,18 +41,6 @@ class Genre(BaseModel):
 
     def __str__(self):
         return self.title
-
-
-class Language(BaseModel):
-    name = models.CharField(max_length=255, verbose_name=_("Name"))
-    code = models.CharField(max_length=15, verbose_name=_("Code"), unique=True)
-
-    class Meta:
-        verbose_name = _("Language")
-        verbose_name_plural = _("Languages")
-
-    def __str__(self):
-        return self.name
 
 
 class Book(BaseModel):
@@ -67,20 +60,6 @@ class Book(BaseModel):
     genres = models.ManyToManyField(
         Genre, verbose_name=_("Genres"), related_name="books"
     )
-    language = models.ForeignKey(
-        Language,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        verbose_name=_("Language"),
-        related_name="books",
-    )
-    published_year = models.PositiveIntegerField(
-        verbose_name=_("Published Year"), null=True, blank=True
-    )
-    page_count = models.PositiveIntegerField(
-        verbose_name=_("Page Count"), null=True, blank=True
-    )
     epub_file = models.FileField(
         upload_to="books/epub/%Y/%m/",
         verbose_name=_("EPUB File"),
@@ -89,30 +68,17 @@ class Book(BaseModel):
         blank=True,
         validators=[FileExtensionValidator(allowed_extensions=["epub"])],
     )
-    grades = models.CharField(
-        max_length=8,
-        choices=GradeChoices.choices,
-        verbose_name=_("Grade"),
-        null=True,
-        blank=True,
+    audiobook_duration = models.FloatField(
+        verbose_name=_("Audiobook Duration"), null=True, blank=True
     )
-    featured_date = models.DateField(
-        verbose_name=_("Featured Date"),
-        null=True,
-        blank=True,
-        help_text=_("Set to the 1st of the month (e.g. 2026-06-01 for June 2026)"),
+    mutolaa_id = models.CharField(
+        max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
     )
     is_active = models.BooleanField(verbose_name=_("Is Active"), default=True)
-    order = models.PositiveIntegerField(verbose_name=_("Order"), default=0)
 
     class Meta:
         verbose_name = _("Book")
         verbose_name_plural = _("Books")
-        indexes = [
-            models.Index(fields=["is_active"]),
-            models.Index(fields=["published_year"]),
-            models.Index(fields=["featured_date"]),
-        ]
 
     def __str__(self):
         author_names = ", ".join(a.name for a in self.authors.all())
@@ -150,8 +116,9 @@ class AudioFile(BaseModel):
         max_length=511,
         validators=[FileExtensionValidator(allowed_extensions=["mp3"])],
     )
-    duration = models.PositiveIntegerField(
-        verbose_name=_("Duration (seconds)"), default=0
+    duration = models.FloatField(
+        verbose_name=_("Duration (seconds)"),
+        null=True,
     )
     order = models.PositiveIntegerField(verbose_name=_("Order"), default=0)
 

@@ -15,7 +15,6 @@ class BookDetailView(generics.RetrieveAPIView):
         return (
             Book.objects.filter(is_active=True)
             .prefetch_related("authors", "genres")
-            .select_related("language")
             .annotate(
                 audio_duration_total=Sum("audio_files__duration"),
                 audio_book_count=Count("audio_files"),
