@@ -11,8 +11,8 @@ from apps.assessment.serializers import AssessmentAttemptDetailSerializer
 from apps.assessment.services.assessment_attempt import AssessmentAttemptService
 
 
-class StartAssessmentView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+class StartAssessmentAPIView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request, assessment_id):
         assessment = get_object_or_404(
@@ -47,4 +47,4 @@ class StartAssessmentView(APIView):
         )
 
 
-__all__ = ["StartAssessmentView"]
+__all__ = ["StartAssessmentAPIView"]

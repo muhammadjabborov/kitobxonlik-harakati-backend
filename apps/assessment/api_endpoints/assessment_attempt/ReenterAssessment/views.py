@@ -8,8 +8,8 @@ from apps.assessment.serializers import AssessmentAttemptDetailSerializer
 from apps.assessment.services.assessment_attempt import AssessmentAttemptService
 
 
-class ReenterAssessmentView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+class ReenterAssessmentAPIView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
 
     def get(self, request, attempt_id):
         attempt = get_object_or_404(
@@ -24,4 +24,4 @@ class ReenterAssessmentView(APIView):
         return Response(AssessmentAttemptDetailSerializer(attempt).data)
 
 
-__all__ = ["ReenterAssessmentView"]
+__all__ = ["ReenterAssessmentAPIView"]

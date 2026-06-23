@@ -1,7 +1,7 @@
 from django.utils import timezone
 from rest_framework import serializers
 
-from apps.assessment.models import MonthlyAssessment
+from apps.assessment.models import MonthlyAssessment, UserMonthlyAssessmentAttempt
 
 
 class AssessmentStatus:
@@ -11,10 +11,20 @@ class AssessmentStatus:
     LOCKED = "locked"
 
 
+class AttemptSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserMonthlyAssessmentAttempt
+        fields = (
+            "id",
+            "total_score",
+            "spent_time_ms",
+        )
+
+
 class MonthlyAssessmentListSerializer(serializers.ModelSerializer):
     month_start = serializers.DateField()
     grade = serializers.CharField()
-    attempt_id = serializers.IntegerField(allow_null=True, required=False)
+    attempt = serializers.SerializerMethodField()
     status = serializers.SerializerMethodField()
 
     class Meta:
@@ -26,13 +36,18 @@ class MonthlyAssessmentListSerializer(serializers.ModelSerializer):
             "start_time",
             "end_time",
             "time_limit",
-            "attempt_id",
+            "attempt",
             "status",
         )
 
+    def get_attempt(self, obj):
+        if obj.attempt is None:
+            return None
+        return AttemptSerializer(obj.attempt).data
+
     def get_status(self, obj):
-        if obj.attempt_id is not None:
-            if obj.attempt_is_completed:
+        if obj.attempt is not None:
+            if obj.attempt.is_completed:
                 return AssessmentStatus.COMPLETED
             return AssessmentStatus.IN_PROGRESS
         today = timezone.localdate()

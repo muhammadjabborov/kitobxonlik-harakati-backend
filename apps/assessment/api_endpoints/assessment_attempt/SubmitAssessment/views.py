@@ -10,8 +10,8 @@ from apps.assessment.services.assessment_attempt import AssessmentAttemptService
 from .serializers import SubmitAttemptSerializer, SubmitResultSerializer
 
 
-class SubmitAssessmentView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+class SubmitAssessmentAPIView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
 
     @swagger_auto_schema(
         request_body=SubmitAttemptSerializer,
@@ -34,4 +34,4 @@ class SubmitAssessmentView(APIView):
         return Response(SubmitResultSerializer(attempt).data)
 
 
-__all__ = ["SubmitAssessmentView"]
+__all__ = ["SubmitAssessmentAPIView"]

@@ -36,6 +36,11 @@ from apps.users.models import User
 
 
 class Command(BaseCommand):
+    """
+    example:
+    python manage.py seed_assessment_data --flush
+    """
+
     help = "Seed sample data for competition and assessment apps (development / testing only)"
 
     # ── Season ────────────────────────────────────────────────────────────────
