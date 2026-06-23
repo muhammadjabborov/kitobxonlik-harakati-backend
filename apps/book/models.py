@@ -15,6 +15,9 @@ class Author(BaseModel):
         verbose_name=_("Image"),
         max_length=255,
     )
+    mutolaa_id = models.CharField(
+        max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
+    )
 
     class Meta:
         verbose_name = _("Author")
@@ -65,6 +68,9 @@ class Book(BaseModel):
         blank=True,
         validators=[FileExtensionValidator(allowed_extensions=["epub"])],
     )
+    audiobook_duration = models.FloatField(
+        verbose_name=_("Audiobook Duration"), null=True, blank=True
+    )
     mutolaa_id = models.CharField(
         max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
     )
@@ -110,8 +116,9 @@ class AudioFile(BaseModel):
         max_length=511,
         validators=[FileExtensionValidator(allowed_extensions=["mp3"])],
     )
-    duration = models.PositiveIntegerField(
-        verbose_name=_("Duration (seconds)"), default=0
+    duration = models.FloatField(
+        verbose_name=_("Duration (seconds)"),
+        null=True,
     )
     order = models.PositiveIntegerField(verbose_name=_("Order"), default=0)
 

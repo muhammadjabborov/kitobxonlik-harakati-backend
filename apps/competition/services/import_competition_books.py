@@ -23,25 +23,31 @@ class CompetitionBooksImportError(Exception):
 
 class ImportCompetitionBooksService:
     REQUIRED_FIELDS = {
-        "authors",
         "grade",
         "is_mandatory",
         "month_start",
         "original_source_title",
     }
 
-    def __init__(self, path):
+    def __init__(self, path, process_books_without_mutolaa_id=False):
         self.path = Path(path)
+        self.process_books_without_mutolaa_id = process_books_without_mutolaa_id
 
     @transaction.atomic
     def import_books(self):
         all_records = self._load_records()
-        records, skipped_count = self._filter_records_with_mutolaa_id(all_records)
+        records, skipped_count = self._filter_records(all_records)
         self._validate_records(records)
         season = self._get_active_season()
         stats = self._import_records(season, records)
         stats["records_total"] = len(all_records)
         stats["records_skipped_without_mutolaa_id"] = skipped_count
+        stats["records_processed_without_mutolaa_id"] = sum(
+            1
+            for record in records
+            if isinstance(record, dict)
+            and not self._clean_mutolaa_id(record.get("mutolaa_id"))
+        )
         return stats
 
     def _load_records(self):
@@ -62,6 +68,12 @@ class ImportCompetitionBooksService:
             )
 
         return records
+
+    def _filter_records(self, records):
+        if self.process_books_without_mutolaa_id:
+            return records, 0
+
+        return self._filter_records_with_mutolaa_id(records)
 
     def _filter_records_with_mutolaa_id(self, records):
         filtered_records = []
@@ -93,6 +105,8 @@ class ImportCompetitionBooksService:
                     f"Row {index}: missing required fields: {fields}."
                 )
 
+            mutolaa_id = self._clean_mutolaa_id(record.get("mutolaa_id"))
+
             title = self._clean_value(record["original_source_title"])
             if not title:
                 raise CompetitionBooksImportError(
@@ -103,15 +117,21 @@ class ImportCompetitionBooksService:
                     f"Row {index}: title is longer than Book.title max_length."
                 )
 
-            authors = record["authors"]
-            if not isinstance(authors, list) or not authors:
-                raise CompetitionBooksImportError(
-                    f"Row {index}: authors must be a non-empty list."
-                )
-            if any(not self._clean_value(author) for author in authors):
-                raise CompetitionBooksImportError(
-                    f"Row {index}: authors contains an empty value."
-                )
+            if not mutolaa_id:
+                if "authors" not in record:
+                    raise CompetitionBooksImportError(
+                        f"Row {index}: missing required fields: authors."
+                    )
+
+                authors = record["authors"]
+                if not isinstance(authors, list) or not authors:
+                    raise CompetitionBooksImportError(
+                        f"Row {index}: authors must be a non-empty list."
+                    )
+                if any(not self._clean_value(author) for author in authors):
+                    raise CompetitionBooksImportError(
+                        f"Row {index}: authors contains an empty value."
+                    )
 
             if record["grade"] not in valid_grades:
                 raise CompetitionBooksImportError(
@@ -171,10 +191,14 @@ class ImportCompetitionBooksService:
                 else "competition_month_grades_reused"
             ] += 1
 
-            authors = [
-                self._get_or_create_author(author_name, author_cache, stats)
-                for author_name in record["authors"]
-            ]
+            mutolaa_id = self._clean_mutolaa_id(record.get("mutolaa_id"))
+            authors = []
+            if not mutolaa_id:
+                authors = [
+                    self._get_or_create_author(author_name, author_cache, stats)
+                    for author_name in record["authors"]
+                ]
+
             book = self._get_or_create_book(
                 record=record,
                 authors=authors,
@@ -255,6 +279,25 @@ class ImportCompetitionBooksService:
         book = None
         if mutolaa_id:
             book = book_cache_by_mutolaa_id.get(mutolaa_id)
+            if book is None:
+                book = Book.objects.create(
+                    title=title,
+                    description="",
+                    image="",
+                    mutolaa_id=mutolaa_id,
+                )
+                stats["books_created"] += 1
+            else:
+                stats["books_reused"] += 1
+                self._update_book_title(book, title, stats)
+
+            self._cache_book(
+                book,
+                book_cache_by_mutolaa_id,
+                book_cache_by_title_authors,
+                book_cache_by_title,
+            )
+            return book
 
         if book is None:
             for candidate in (title, fallback_title):
@@ -284,10 +327,7 @@ class ImportCompetitionBooksService:
             stats["books_created"] += 1
         else:
             stats["books_reused"] += 1
-            if mutolaa_id and not book.mutolaa_id:
-                book.mutolaa_id = mutolaa_id
-                book.save(update_fields=["mutolaa_id", "updated_at"])
-                stats["books_updated"] += 1
+            self._update_book_title(book, title, stats)
 
         for author in authors:
             if not book.authors.filter(pk=author.pk).exists():
@@ -302,6 +342,14 @@ class ImportCompetitionBooksService:
         )
 
         return book
+
+    def _update_book_title(self, book, title, stats):
+        if book.title == title:
+            return
+
+        book.title = title
+        book.save(update_fields=["title", "updated_at"])
+        stats["books_updated"] += 1
 
     def _cache_book(
         self,
