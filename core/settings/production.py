@@ -15,7 +15,8 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
-    "https://api.kitobxonlikharakati.uz/" "https://dev-api.kitobxonlikharakati.uz/"
+    "https://api.kitobxonlikharakati.uz",
+    "https://dev-api.kitobxonlikharakati.uz",
 ]
 
 ###################################################################
@@ -35,7 +36,3 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
     "range",
 ]
-
-REDIS_HOST = env.str("REDIS_HOST", "redis")
-REDIS_PORT = env.int("REDIS_PORT", 6379)
-REDIS_DB = env.int("REDIS_DB", 0)
