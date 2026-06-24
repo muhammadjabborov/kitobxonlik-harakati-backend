@@ -21,7 +21,7 @@ def generate_cache_key(type_: str, *args) -> str:
 
 def is_code_valid(cache_key: str, code: str) -> bool:
     if getattr(settings, "STAGE", "development") == "development" and code == getattr(
-        settings, "DEV_OTP_CODE", "7777"
+        settings, "DEV_OTP_CODE", "1071"
     ):
         return True
     valid_code = cache.get(cache_key)
@@ -29,8 +29,10 @@ def is_code_valid(cache_key: str, code: str) -> bool:
 
 
 class OTPService:
-    auth_code_message = "Kitobxonlik harakatiga kirishni tasdiqlash uchun kod: {}\npqT/VR+ITq7"
-    static_code = "7777"
+    auth_code_message = (
+        "Kitobxonlik harakatiga kirishni tasdiqlash uchun kod: {}\npqT/VR+ITq7"
+    )
+    static_code = "1071"
     test_phone = "+998999999999"
 
     def __init__(self, cache_type: str = CacheTypes.auth_sms_code, timeout: int = 120):

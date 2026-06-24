@@ -1,5 +1,4 @@
 import openpyxl
-
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
@@ -7,6 +6,11 @@ from apps.common.models import Region
 
 
 class Command(BaseCommand):
+    """
+    example:
+    python manage.py load_regions
+    """
+
     help = "Load regions, districts, and neighborhoods from excel_data/regions.xlsx"
 
     def handle(self, *args, **kwargs):

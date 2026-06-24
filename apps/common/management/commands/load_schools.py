@@ -1,5 +1,4 @@
 import openpyxl
-
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import transaction
@@ -8,6 +7,11 @@ from apps.common.models import Region, School
 
 
 class Command(BaseCommand):
+    """
+    example:
+    python manage.py load_schools
+    """
+
     help = "Load schools from school_data/*.xlsx (all_regions_schools.xlsx + tashkent_schools.xlsx)"
 
     TASHKENT_REGION_NAME = "Toshkent shahri"
@@ -22,7 +26,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         if options["clear"]:
             deleted, _ = School.objects.all().delete()
-            self.stdout.write(self.style.WARNING(f"Deleted {deleted} existing School rows."))
+            self.stdout.write(
+                self.style.WARNING(f"Deleted {deleted} existing School rows.")
+            )
 
         base = settings.BASE_DIR / "excel_data"
 
@@ -31,12 +37,16 @@ class Command(BaseCommand):
         total_missing_district = 0
 
         with transaction.atomic():
-            created, skipped, missing = self._load_all_regions(base / "all_regions_schools.xlsx")
+            created, skipped, missing = self._load_all_regions(
+                base / "all_regions_schools.xlsx"
+            )
             total_created += created
             total_skipped += skipped
             total_missing_district += missing
 
-            created, skipped, missing = self._load_tashkent(base / "tashkent_schools.xlsx")
+            created, skipped, missing = self._load_tashkent(
+                base / "tashkent_schools.xlsx"
+            )
             total_created += created
             total_skipped += skipped
             total_missing_district += missing
@@ -73,11 +83,15 @@ class Command(BaseCommand):
                 continue
 
             region = self._get_region(region_name, region_cache)
-            district, district_was_created = self._get_district(region, district_name, district_cache)
+            district, district_was_created = self._get_district(
+                region, district_name, district_cache
+            )
             if district_was_created:
                 missing_district += 1
 
-            _, was_created = School.objects.get_or_create(district=district, name=school_name)
+            _, was_created = School.objects.get_or_create(
+                district=district, name=school_name
+            )
             if was_created:
                 created += 1
             else:
@@ -88,7 +102,9 @@ class Command(BaseCommand):
 
     def _load_tashkent(self, path):
         if not path.exists():
-            self.stdout.write(self.style.WARNING(f"  Skipping {path.name} — file not found."))
+            self.stdout.write(
+                self.style.WARNING(f"  Skipping {path.name} — file not found.")
+            )
             return 0, 0, 0
 
         self.stdout.write(f"Loading {path.name}...")
@@ -109,11 +125,15 @@ class Command(BaseCommand):
             if not district_name or not school_name:
                 continue
 
-            district, district_was_created = self._get_district(region, district_name, district_cache)
+            district, district_was_created = self._get_district(
+                region, district_name, district_cache
+            )
             if district_was_created:
                 missing_district += 1
 
-            _, was_created = School.objects.get_or_create(district=district, name=school_name)
+            _, was_created = School.objects.get_or_create(
+                district=district, name=school_name
+            )
             if was_created:
                 created += 1
             else:
