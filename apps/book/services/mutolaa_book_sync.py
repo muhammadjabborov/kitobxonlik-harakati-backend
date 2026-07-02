@@ -105,6 +105,16 @@ class MutolaaBookSyncService:
     def _sync_book_fields(self, data, result):
         update_fields = []
 
+        description = self._clean_value(data.get("description"))
+        if description and self.book.description != description:
+            self.book.description = description
+            update_fields.append("description")
+
+        mutolaa_slug = self._clean_value(data.get("slug"))
+        if mutolaa_slug and self.book.mutolaa_slug != mutolaa_slug:
+            self.book.mutolaa_slug = mutolaa_slug
+            update_fields.append("mutolaa_slug")
+
         title = self._clean_value(data.get("title"))
         if title and self.book.title != title:
             self._log(

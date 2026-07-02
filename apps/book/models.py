@@ -74,6 +74,12 @@ class Book(BaseModel):
     mutolaa_id = models.CharField(
         max_length=255, verbose_name=_("Mutolaa ID"), null=True, blank=True
     )
+    mutolaa_slug = models.CharField(
+        max_length=255,
+        verbose_name=_("Mutolaa slug"),
+        null=True,
+        blank=True,
+    )
     show_on_home = models.BooleanField(verbose_name=_("Show on Home"), default=False)
     is_active = models.BooleanField(verbose_name=_("Is Active"), default=True)
 

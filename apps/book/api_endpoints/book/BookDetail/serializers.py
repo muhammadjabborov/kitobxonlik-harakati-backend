@@ -20,6 +20,7 @@ class BookDetailSerializer(serializers.ModelSerializer):
             "description",
             "image",
             "slug",
+            "mutolaa_slug",
             "genres",
             "authors",
             "audio_duration",
