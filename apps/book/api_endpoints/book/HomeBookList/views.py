@@ -11,7 +11,9 @@ class HomeBookListView(ListAPIView):
     pagination_class = None
 
     def get_queryset(self):
-        qs = Book.objects.filter(is_active=True).prefetch_related("authors", "genres")
+        qs = Book.objects.filter(is_active=True, show_on_home=True).prefetch_related(
+            "authors", "genres"
+        )
         return qs.order_by("id")[:4]
 
 
