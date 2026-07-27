@@ -95,8 +95,8 @@
     "original_source_title": "“Ertaklar to‘plami”",
     "month_start": "2027-01-01",
     "grade_group": "1_5",
-    "mutolaa_id": null,
-    "mutolaa_match_percentage": 0.0
+    "mutolaa_id": 15,
+    "mutolaa_match_percentage": 80.0
   },
   {
     "book_title": "Aql va baxt",
@@ -128,8 +128,8 @@
     "original_source_title": "“Sehrli qalpoqcha”",
     "month_start": "2026-06-01",
     "grade_group": "1_5",
-    "mutolaa_id": null,
-    "mutolaa_match_percentage": 0.0
+    "mutolaa_id": 3381,
+    "mutolaa_match_percentage": 100.0
   },
   {
     "book_title": "Meshpolvon jangga otlandi",
@@ -481,8 +481,8 @@
     "original_source_title": "“Pinokkioning boshidan kechirganlari, Buratino va uning sarguzashtlari”",
     "month_start": "2026-08-01",
     "grade_group": "6_8",
-    "mutolaa_id": null,
-    "mutolaa_match_percentage": 0.0
+    "mutolaa_id": 1362,
+    "mutolaa_match_percentage": 100.0
   },
   {
     "book_title": "Bolalik",
