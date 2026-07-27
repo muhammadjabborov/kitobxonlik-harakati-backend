@@ -14,7 +14,7 @@ from apps.competition.models import (
     CompetitionMonthGrade,
     CompetitionSeason,
 )
-from apps.users.choices import GradeChoices
+from apps.users.choices import CompetitionGradeGroupChoices
 
 
 class CompetitionBooksImportError(Exception):
@@ -23,8 +23,7 @@ class CompetitionBooksImportError(Exception):
 
 class ImportCompetitionBooksService:
     REQUIRED_FIELDS = {
-        "grade",
-        "is_mandatory",
+        "grade_group",
         "month_start",
         "original_source_title",
     }
@@ -32,9 +31,11 @@ class ImportCompetitionBooksService:
     def __init__(self, path, process_books_without_mutolaa_id=False):
         self.path = Path(path)
         self.process_books_without_mutolaa_id = process_books_without_mutolaa_id
+        self._processed_book_title_ids = set()
 
     @transaction.atomic
     def import_books(self):
+        self._processed_book_title_ids.clear()
         all_records = self._load_records()
         records, skipped_count = self._filter_records(all_records)
         self._validate_records(records)
@@ -92,7 +93,7 @@ class ImportCompetitionBooksService:
         return filtered_records, skipped_count
 
     def _validate_records(self, records):
-        valid_grades = {choice.value for choice in GradeChoices}
+        valid_grade_groups = {choice.value for choice in CompetitionGradeGroupChoices}
 
         for index, record in enumerate(records, start=1):
             if not isinstance(record, dict):
@@ -133,9 +134,9 @@ class ImportCompetitionBooksService:
                         f"Row {index}: authors contains an empty value."
                     )
 
-            if record["grade"] not in valid_grades:
+            if record["grade_group"] not in valid_grade_groups:
                 raise CompetitionBooksImportError(
-                    f"Row {index}: invalid grade: {record['grade']!r}."
+                    f"Row {index}: invalid grade_group: {record['grade_group']!r}."
                 )
 
             try:
@@ -144,11 +145,6 @@ class ImportCompetitionBooksService:
                 raise CompetitionBooksImportError(
                     f"Row {index}: invalid month_start: {record['month_start']!r}."
                 ) from exc
-
-            if not isinstance(record["is_mandatory"], bool):
-                raise CompetitionBooksImportError(
-                    f"Row {index}: is_mandatory must be boolean."
-                )
 
     def _get_active_season(self):
         try:
@@ -183,7 +179,7 @@ class ImportCompetitionBooksService:
 
             month_grade, created = CompetitionMonthGrade.objects.get_or_create(
                 month=month,
-                grade=record["grade"],
+                grade_group=record["grade_group"],
             )
             stats[
                 "competition_month_grades_created"
@@ -208,17 +204,12 @@ class ImportCompetitionBooksService:
                 stats=stats,
             )
 
-            month_book, created = CompetitionMonthBook.objects.get_or_create(
+            _, created = CompetitionMonthBook.objects.get_or_create(
                 month_grade=month_grade,
                 book=book,
-                defaults={"is_required": record["is_mandatory"]},
             )
             if created:
                 stats["competition_month_books_created"] += 1
-            elif month_book.is_required != record["is_mandatory"]:
-                month_book.is_required = record["is_mandatory"]
-                month_book.save(update_fields=["is_required", "updated_at"])
-                stats["competition_month_books_updated"] += 1
             else:
                 stats["competition_month_books_reused"] += 1
 
@@ -286,6 +277,7 @@ class ImportCompetitionBooksService:
                     image="",
                     mutolaa_id=mutolaa_id,
                 )
+                self._processed_book_title_ids.add(book.pk)
                 stats["books_created"] += 1
             else:
                 stats["books_reused"] += 1
@@ -324,6 +316,7 @@ class ImportCompetitionBooksService:
                 image="",
                 mutolaa_id=mutolaa_id,
             )
+            self._processed_book_title_ids.add(book.pk)
             stats["books_created"] += 1
         else:
             stats["books_reused"] += 1
@@ -344,6 +337,10 @@ class ImportCompetitionBooksService:
         return book
 
     def _update_book_title(self, book, title, stats):
+        if book.pk in self._processed_book_title_ids:
+            return
+
+        self._processed_book_title_ids.add(book.pk)
         if book.title == title:
             return
 

@@ -1,11 +1,10 @@
-from rest_framework import generics, status
-from rest_framework.exceptions import ValidationError
-from rest_framework.response import Response
-
 from django.contrib.auth.models import update_last_login
 from django.core.cache import cache
 from django.db import transaction
 from django.utils.translation import gettext_lazy as _
+from rest_framework import generics, status
+from rest_framework.exceptions import ValidationError
+from rest_framework.response import Response
 
 from apps.users.api_endpoints.auth.CheckRegisterOTP.serializers import (
     CheckRegisterOTPSerializer,
@@ -38,7 +37,9 @@ class CheckRegisterOTPView(generics.GenericAPIView):
             )
 
         phone_number = data["phone_number"]
-        otp_key = generate_cache_key(CacheTypes.register_sms_code, phone_number, session)
+        otp_key = generate_cache_key(
+            CacheTypes.register_sms_code, phone_number, session
+        )
         if not is_code_valid(otp_key, code):
             raise ValidationError(detail={"code": _("Wrong code!")}, code="invalid")
 
@@ -53,7 +54,10 @@ class CheckRegisterOTPView(generics.GenericAPIView):
             )
 
         identity_number = data.get("identity_number")
-        if identity_number and User.objects.filter(identity_number=identity_number).exists():
+        if (
+            identity_number
+            and User.objects.filter(identity_number=identity_number).exists()
+        ):
             cache.delete(form_key)
             cache.delete(otp_key)
             raise ValidationError(
@@ -70,7 +74,8 @@ class CheckRegisterOTPView(generics.GenericAPIView):
                 phone_number=phone_number,
                 full_name=data["full_name"],
                 birth_date=data.get("birth_date"),
-                grade=data.get("grade"),
+                school_grade=data.get("school_grade"),
+                competition_grade_group=data.get("competition_grade_group"),
                 region_id=data.get("region"),
                 identity_type=data.get("identity_type"),
                 identity_number=identity_number,

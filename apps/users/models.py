@@ -1,9 +1,10 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.models import BaseModel, Region, School
-from apps.users.choices import GradeChoices, IdentityTypeChoices
+from apps.users.choices import CompetitionGradeGroupChoices, IdentityTypeChoices
 from apps.users.managers import UserManager
 
 
@@ -11,10 +12,16 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     full_name = models.CharField(_("Full name"), max_length=256)
     phone_number = models.CharField(_("Phone number"), max_length=20, unique=True)
     birth_date = models.DateField(_("Birth date"), null=True, blank=True)
-    grade = models.CharField(
-        _("Grade"),
+    school_grade = models.PositiveSmallIntegerField(
+        _("School grade"),
+        validators=[MinValueValidator(1), MaxValueValidator(11)],
+        null=True,
+        blank=True,
+    )
+    competition_grade_group = models.CharField(
+        _("Competition grade group"),
         max_length=8,
-        choices=GradeChoices.choices,
+        choices=CompetitionGradeGroupChoices.choices,
         null=True,
         blank=True,
     )
@@ -60,7 +67,10 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
         verbose_name = _("User")
         verbose_name_plural = _("Users")
         indexes = [
-            models.Index(fields=["grade"], name="user_grade_idx"),
+            models.Index(
+                fields=["competition_grade_group"],
+                name="user_comp_grade_group_idx",
+            ),
             models.Index(fields=["identity_number"], name="user_identity_number_idx"),
         ]
         unique_together = [["phone_number", "identity_number"]]

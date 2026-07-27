@@ -23,7 +23,7 @@ class AttemptSerializer(serializers.ModelSerializer):
 
 class MonthlyAssessmentListSerializer(serializers.ModelSerializer):
     month_start = serializers.DateField()
-    grade = serializers.CharField()
+    grade_group = serializers.CharField()
     attempt = serializers.SerializerMethodField()
     status = serializers.SerializerMethodField()
 
@@ -31,7 +31,7 @@ class MonthlyAssessmentListSerializer(serializers.ModelSerializer):
         model = MonthlyAssessment
         fields = (
             "id",
-            "grade",
+            "grade_group",
             "month_start",
             "start_time",
             "end_time",

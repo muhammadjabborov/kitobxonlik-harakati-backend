@@ -20,7 +20,7 @@ class AssessmentQuestionDistributionInline(admin.TabularInline):
 class MonthlyAssessmentAdmin(admin.ModelAdmin):
     list_display = ("id", "__str__", "start_time", "end_time", "time_limit")
     list_display_links = ("id", "__str__")
-    list_filter = ("month_grade__grade", "month_grade__month__season")
+    list_filter = ("month_grade__grade_group", "month_grade__month__season")
     search_fields = ("month_grade__month__season__title",)
     readonly_fields = ("created_at", "updated_at")
     inlines = [AssessmentQuestionDistributionInline]
@@ -72,7 +72,10 @@ class UserMonthlyAssessmentAttemptAdmin(admin.ModelAdmin):
         "finished_at",
     )
     list_display_links = ("id", "user", "monthly_assessment")
-    list_filter = ("is_completed", "monthly_assessment__month_grade__grade")
+    list_filter = (
+        "is_completed",
+        "monthly_assessment__month_grade__grade_group",
+    )
     search_fields = ("user__full_name", "user__phone_number")
     autocomplete_fields = ("user", "monthly_assessment")
     readonly_fields = (

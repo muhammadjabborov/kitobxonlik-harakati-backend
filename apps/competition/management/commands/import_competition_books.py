@@ -71,7 +71,6 @@ class Command(BaseCommand):
             ("Books updated", "books_updated"),
             ("Book-author links added", "book_authors_added"),
             ("Competition month books created", "competition_month_books_created"),
-            ("Competition month books updated", "competition_month_books_updated"),
             ("Competition month books reused", "competition_month_books_reused"),
         ]
 

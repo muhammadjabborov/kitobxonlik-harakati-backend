@@ -31,7 +31,7 @@ from apps.competition.models import (
     CompetitionMonthGrade,
     CompetitionSeason,
 )
-from apps.users.choices import GradeChoices
+from apps.users.choices import CompetitionGradeGroupChoices
 from apps.users.models import User
 
 
@@ -67,43 +67,26 @@ class Command(BaseCommand):
     OPTIONS_PER_MCQ = 4
     TIME_LIMIT_SECONDS = 3600  # 1 hour
 
-    # ── Test users (one per grade) ────────────────────────────────────────────
+    # ── Test users (one per competition grade group) ─────────────────────────
     TEST_PASSWORD = "Test@12345"
     TEST_USERS = [
         {
             "full_name": "Test 1-5 sinf",
             "phone_number": "+998900000015",
-            "grade": GradeChoices.GRADE_1_5,
+            "school_grade": 5,
+            "competition_grade_group": CompetitionGradeGroupChoices.GROUP_1_5,
         },
         {
-            "full_name": "Test 6-sinf",
-            "phone_number": "+998900000016",
-            "grade": GradeChoices.GRADE_6,
+            "full_name": "Test 6-8 sinf",
+            "phone_number": "+998900000068",
+            "school_grade": 8,
+            "competition_grade_group": CompetitionGradeGroupChoices.GROUP_6_8,
         },
         {
-            "full_name": "Test 7-sinf",
-            "phone_number": "+998900000017",
-            "grade": GradeChoices.GRADE_7,
-        },
-        {
-            "full_name": "Test 8-sinf",
-            "phone_number": "+998900000018",
-            "grade": GradeChoices.GRADE_8,
-        },
-        {
-            "full_name": "Test 9-sinf",
-            "phone_number": "+998900000019",
-            "grade": GradeChoices.GRADE_9,
-        },
-        {
-            "full_name": "Test 10-sinf",
-            "phone_number": "+998900000020",
-            "grade": GradeChoices.GRADE_10,
-        },
-        {
-            "full_name": "Test 11-sinf",
-            "phone_number": "+998900000021",
-            "grade": GradeChoices.GRADE_11,
+            "full_name": "Test 9-11 sinf",
+            "phone_number": "+998900000911",
+            "school_grade": 11,
+            "competition_grade_group": CompetitionGradeGroupChoices.GROUP_9_11,
         },
     ]
 
@@ -135,10 +118,10 @@ class Command(BaseCommand):
             self.style.HTTP_INFO(f"Test user password: {self.TEST_PASSWORD}")
         )
         self.stdout.write("")
-        self.stdout.write("Phone number       Grade")
+        self.stdout.write("Phone number       Competition grade group")
         self.stdout.write("-" * 40)
         for u in self.TEST_USERS:
-            self.stdout.write(f"{u['phone_number']}   {u['grade']}")
+            self.stdout.write(f"{u['phone_number']}   {u['competition_grade_group']}")
 
     # ── Steps ─────────────────────────────────────────────────────────────────
 
@@ -181,12 +164,12 @@ class Command(BaseCommand):
 
     def _seed_month_grades(self, months):
         month_grades = []
-        grades = [g[0] for g in GradeChoices.choices]
+        grade_groups = [group[0] for group in CompetitionGradeGroupChoices.choices]
         for month in months:
-            for grade in grades:
+            for grade_group in grade_groups:
                 mg, _ = CompetitionMonthGrade.objects.get_or_create(
                     month=month,
-                    grade=grade,
+                    grade_group=grade_group,
                 )
                 month_grades.append(mg)
         self.stdout.write(f"  Month-grade entries: {len(month_grades)}")
@@ -228,7 +211,7 @@ class Command(BaseCommand):
             if assessment.questions.exists():
                 continue  # already seeded for this assessment
 
-            grade = assessment.month_grade.grade
+            grade_group = assessment.month_grade.grade_group
             month_label = assessment.month_grade.month.month_start.strftime("%b %Y")
 
             for i in range(1, self.MCQ_PER_ASSESSMENT + 1):
@@ -237,7 +220,7 @@ class Command(BaseCommand):
                         monthly_assessment=assessment,
                         question_type=QuestionTypeChoices.MULTIPLE_CHOICE,
                         question=(
-                            f"[{grade} | {month_label}] Test savoli #{i}: "
+                            f"[{grade_group} | {month_label}] Test savoli #{i}: "
                             f"Kitob haqida quyidagi fikrlardan qaysi biri to'g'ri?"
                         ),
                         correct_answer="",
@@ -251,7 +234,7 @@ class Command(BaseCommand):
                         monthly_assessment=assessment,
                         question_type=QuestionTypeChoices.SHORT_ANSWER,
                         question=(
-                            f"[{grade} | {month_label}] Qisqa javob #{i}: "
+                            f"[{grade_group} | {month_label}] Qisqa javob #{i}: "
                             f"Asardagi bosh qahramon ismini kiriting."
                         ),
                         correct_answer=f"qahramon{i}",
@@ -292,7 +275,8 @@ class Command(BaseCommand):
                 phone_number=data["phone_number"],
                 defaults={
                     "full_name": data["full_name"],
-                    "grade": data["grade"],
+                    "school_grade": data["school_grade"],
+                    "competition_grade_group": data["competition_grade_group"],
                     "password": hashed_password,
                     "is_active": True,
                 },

@@ -18,7 +18,7 @@ class CompetitionSeasonAdmin(admin.ModelAdmin):
 class CompetitionMonthBookInline(admin.StackedInline):
     model = CompetitionMonthBook
     extra = 0
-    fields = ("book", "is_required")
+    fields = ("book",)
     autocomplete_fields = ("book",)
     show_change_link = True
 
@@ -26,7 +26,7 @@ class CompetitionMonthBookInline(admin.StackedInline):
 class CompetitionMonthGradeInline(admin.StackedInline):
     model = CompetitionMonthGrade
     extra = 0
-    fields = ("grade",)
+    fields = ("grade_group",)
     show_change_link = True
 
 
@@ -42,8 +42,8 @@ class CompetitionMonthAdmin(admin.ModelAdmin):
 
 @admin.register(CompetitionMonthGrade)
 class CompetitionMonthGradeAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "month", "grade")
-    list_filter = ("grade", "month__season")
+    list_display = ("__str__", "month", "grade_group")
+    list_filter = ("grade_group", "month__season")
     search_fields = ("month__season__title",)
     autocomplete_fields = ("month",)
     readonly_fields = ("created_at", "updated_at")

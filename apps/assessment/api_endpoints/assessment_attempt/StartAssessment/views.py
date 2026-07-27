@@ -18,7 +18,7 @@ class StartAssessmentAPIView(APIView):
         assessment = get_object_or_404(
             MonthlyAssessment.objects.select_related("month_grade__month"),
             id=assessment_id,
-            month_grade__grade=request.user.grade,
+            month_grade__grade_group=request.user.competition_grade_group,
             month_grade__month__season__is_active=True,
         )
 

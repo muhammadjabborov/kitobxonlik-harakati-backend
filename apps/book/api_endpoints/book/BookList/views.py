@@ -19,13 +19,13 @@ class BookListView(generics.ListAPIView):
             openapi.Parameter(
                 "date",
                 openapi.IN_QUERY,
-                description="Filter books by month. Format: YYYY-MM (e.g. 2026-06). Only applies for authenticated users with a grade.",
+                description="Filter books by month. Format: YYYY-MM (e.g. 2026-06). Only applies for authenticated users with a competition grade group.",
                 type=openapi.TYPE_STRING,
             ),
             openapi.Parameter(
                 "grades",
                 openapi.IN_QUERY,
-                description="Filter books by grade. Only applies for unauthenticated users.",
+                description="Filter books by competition grade group. Only applies for unauthenticated users.",
                 type=openapi.TYPE_STRING,
             ),
         ]

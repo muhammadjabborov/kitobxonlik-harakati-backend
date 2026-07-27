@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.common.models import BaseModel
-from apps.users.choices import GradeChoices
+from apps.users.choices import CompetitionGradeGroupChoices
 
 
 class CompetitionSeason(BaseModel):
@@ -56,24 +56,24 @@ class CompetitionMonthGrade(BaseModel):
         on_delete=models.CASCADE,
         related_name="month_grades",
     )
-    grade = models.CharField(
-        verbose_name=_("Grade"),
+    grade_group = models.CharField(
+        verbose_name=_("Grade group"),
         max_length=10,
-        choices=GradeChoices.choices,
+        choices=CompetitionGradeGroupChoices.choices,
     )
 
     class Meta:
-        verbose_name = _("Competition month grade")
-        verbose_name_plural = _("Competition month grades")
+        verbose_name = _("Competition month grade group")
+        verbose_name_plural = _("Competition month grade groups")
         constraints = [
             models.UniqueConstraint(
-                fields=["month", "grade"],
-                name="unique_competition_month_grade",
+                fields=["month", "grade_group"],
+                name="unique_competition_month_grade_group",
             ),
         ]
 
     def __str__(self):
-        return f"{self.month} ({self.grade})"
+        return f"{self.month} ({self.grade_group})"
 
 
 class CompetitionMonthBook(BaseModel):
@@ -89,7 +89,6 @@ class CompetitionMonthBook(BaseModel):
         on_delete=models.CASCADE,
         related_name="competition_month_books",
     )
-    is_required = models.BooleanField(verbose_name=_("Is required"), default=False)
 
     class Meta:
         verbose_name = _("Competition month book")

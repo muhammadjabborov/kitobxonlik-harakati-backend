@@ -16,18 +16,19 @@ class MonthlyAssessmentService:
         return assessments
 
     def _get_cached_assessments(self):
-        cache_key = f"monthly_assessments:{self.user.grade}"
+        grade_group = self.user.competition_grade_group
+        cache_key = f"monthly_assessments:{grade_group}"
         assessments = cache.get(cache_key)
         if not assessments:
             assessments = list(
                 MonthlyAssessment.objects.filter(
                     month_grade__month__season__is_active=True,
-                    month_grade__grade=self.user.grade,
+                    month_grade__grade_group=grade_group,
                 )
                 .select_related("month_grade__month__season")
                 .annotate(
                     month_start=F("month_grade__month__month_start"),
-                    grade=F("month_grade__grade"),
+                    grade_group=F("month_grade__grade_group"),
                 )
                 .order_by("month_start")
             )

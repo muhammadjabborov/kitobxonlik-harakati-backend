@@ -11,7 +11,8 @@ class UserAdmin(BaseUserAdmin):
         "id",
         "full_name",
         "phone_number",
-        "grade",
+        "school_grade",
+        "competition_grade_group",
         "region",
         "identity_type",
         "is_active",
@@ -19,7 +20,14 @@ class UserAdmin(BaseUserAdmin):
         "created_at",
     )
     list_display_links = ("id", "phone_number")
-    list_filter = ("grade", "identity_type", "is_active", "is_staff", "region")
+    list_filter = (
+        "school_grade",
+        "competition_grade_group",
+        "identity_type",
+        "is_active",
+        "is_staff",
+        "region",
+    )
     search_fields = ("full_name", "phone_number", "identity_number")
     ordering = ("-created_at",)
     autocomplete_fields = ("region",)
@@ -32,7 +40,8 @@ class UserAdmin(BaseUserAdmin):
                 "fields": (
                     "full_name",
                     "birth_date",
-                    "grade",
+                    "school_grade",
+                    "competition_grade_group",
                     "region",
                     "identity_type",
                     "identity_number",
@@ -63,7 +72,8 @@ class UserAdmin(BaseUserAdmin):
                     "phone_number",
                     "full_name",
                     "birth_date",
-                    "grade",
+                    "school_grade",
+                    "competition_grade_group",
                     "region",
                     "identity_type",
                     "identity_number",
